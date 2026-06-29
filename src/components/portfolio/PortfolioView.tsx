@@ -1,34 +1,15 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import {
-  Play,
-  Calendar,
-  Tag,
-  ChevronRight,
-  X,
-  ExternalLink,
-  Sparkles,
-  Award,
-  Sprout,
-  Film,
-} from "lucide-react";
+import { Play, ChevronRight, X } from "lucide-react";
 import {
   agricultureData,
   creativeData,
   leadershipData,
-  portfolioSections,
   videoPortfolio,
 } from "../../data/portfolio";
-import SectionTitle from "../shared/SectionTitle";
-import GlassCard from "../shared/GlassCard";
-import Button from "../shared/Button";
 import { useTab } from "@/context/TabContext";
 import Link from "next/link";
 import ProgramSection from "./ProgramSection";
-
-interface PortfolioViewProps {
-  setActiveTab: (tab: string) => void;
-}
 
 export default function PortfolioView() {
   const { setActiveTab } = useTab();
@@ -40,7 +21,7 @@ export default function PortfolioView() {
       <section className="relative h-[45vh] min-h-[350px] flex items-center justify-center overflow-hidden bg-gray-900">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&w=800&q=80"
+            src="/assets/images/leadership/background2.jpg"
             alt="Corporate Project Team"
             className="w-full h-full object-cover opacity-35"
           />

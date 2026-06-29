@@ -48,7 +48,7 @@ export default function CTASection() {
           </p>
 
           {/* Contact Details Grid (Aesthetic layout) */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-left max-w-5xl mx-auto mb-12 border-y border-gray-150/60 py-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-left max-w-5xl mx-auto mb-12 border-y border-gray-150/60 py-10">
             {/* Address */}
             <div className="flex items-start space-x-3.5">
               <div className="p-2.5 rounded-xl bg-primary-teal/10 text-primary-teal shrink-0">
@@ -101,7 +101,7 @@ export default function CTASection() {
             </div>
 
             {/* Contact Persons */}
-            <div className="flex items-start space-x-3.5 col-span-1">
+            {/* <div className="flex items-start space-x-3.5 col-span-1">
               <div className="p-2.5 rounded-xl bg-secondary-purple/10 text-secondary-purple shrink-0">
                 <Phone className="w-5 h-5" />
               </div>
@@ -124,7 +124,7 @@ export default function CTASection() {
                   </a>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* Action buttons */}

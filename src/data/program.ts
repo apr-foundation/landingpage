@@ -7,8 +7,7 @@ export const programsData: ProgramService[] = [
     description:
       "Layanan pendampingan untuk memastikan setiap program berjalan secara terstruktur, tepat sasaran, dan mencapai target yang telah ditetapkan. Kami membantu mulai dari tahap perencanaan, pengelolaan pelaksanaan, hingga evaluasi dengan pendekatan yang adaptif dan terukur.",
     icon: "Compass",
-    image:
-      "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80",
+    image: "/assets/images/leadership/DSC_0614.JPG",
     category: "Manajemen Program",
     benefits: [
       "Perencanaan program secara komprehensif dan terukur",
@@ -23,8 +22,7 @@ export const programsData: ProgramService[] = [
     description:
       "Program pelatihan intensif yang dirancang untuk meningkatkan kompetensi peserta melalui kurikulum berbasis praktik, studi kasus, dan pendampingan langsung oleh mentor profesional sesuai dengan kebutuhan industri.",
     icon: "Award",
-    image:
-      "https://images.unsplash.com/photo-1531535934202-f0d44431dfec?auto=format&fit=crop&w=800&q=80",
+    image: "/assets/images/leadership/IMG_0147.jpg",
     category: "Pelatihan",
     benefits: [
       "Pelatihan komprehensif untuk pengembangan keterampilan spesifik",
@@ -39,8 +37,7 @@ export const programsData: ProgramService[] = [
     description:
       "Program pengembangan kepemimpinan yang berfokus pada peningkatan kapasitas individu melalui mentoring personal, penguatan soft skills, serta perencanaan karier untuk menciptakan pemimpin yang berdampak.",
     icon: "Users",
-    image:
-      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80",
+    image: "/assets/images/leadership/DSC00810.jpg",
     category: "Kepemimpinan",
     benefits: [
       "Pengembangan leadership dan professional growth secara personal",
@@ -55,8 +52,7 @@ export const programsData: ProgramService[] = [
     description:
       "Layanan kreatif end-to-end yang membantu organisasi, institusi, maupun perusahaan membangun identitas merek, menghasilkan konten berkualitas, dan memperluas jangkauan komunikasi melalui strategi kreatif yang efektif.",
     icon: "Sparkles",
-    image:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
+    image: "/assets/images/social-media/background.avif",
     category: "Agensi Kreatif",
     benefits: [
       "Strategi merek, desain identitas visual, dan produksi konten multimedia",

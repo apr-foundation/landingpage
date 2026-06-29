@@ -5,12 +5,7 @@ import {
   Sprout,
   Sparkles,
   Search,
-  Sliders,
-  Zap,
-  TrendingUp,
   Check,
-  ArrowRight,
-  Mail,
   ChevronRight,
   Route,
   Rocket,
@@ -19,7 +14,6 @@ import {
 import { programsData, processSteps } from "../../data/program";
 import SectionTitle from "../shared/SectionTitle";
 import GlassCard from "../shared/GlassCard";
-import Button from "../shared/Button";
 import { useTab } from "@/context/TabContext";
 import Link from "next/link";
 
@@ -68,7 +62,7 @@ export default function ProgramsView() {
         {/* Unsplash beautiful background of South Jakarta skyscraper skyline at twilight */}
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&w=1600&q=80"
+            src="/assets/images/leadership/background1.jpg"
             alt="South Jakarta Skyline Banner"
             className="w-full h-full object-cover opacity-35"
           />

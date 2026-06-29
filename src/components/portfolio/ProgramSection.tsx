@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Calendar, Sprout } from "lucide-react";
+import Image from "next/image";
 
 const ProgramSection = ({ data = {}, variant = "leadership" }: any) => {
   const { icon, title, badge, description, tags, pillars, portfolio } = data;
@@ -89,13 +90,14 @@ const ProgramSection = ({ data = {}, variant = "leadership" }: any) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
-          <div className="text-left max-w-2xl">
-            <span
-              className={`inline-flex items-center px-3 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider ${styles.badgeBg} ${styles.badgeText} mb-3.5 border ${styles.border}`}
-            >
-              <span className="mr-1.5">{icon}</span>
-              <span>{badge}</span>
-            </span>
+          <div className="text-left max-w-2xl ">
+            <Image
+              src={icon}
+              alt={title}
+              width={60}
+              height={60}
+              className="mb-4"
+            />
             <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-950 tracking-tight font-sans mb-3">
               {title}
             </h2>

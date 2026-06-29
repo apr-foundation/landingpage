@@ -47,7 +47,7 @@ export const statsData: StatItem[] = [
 export const focusAreas: FocusArea[] = [
   {
     id: "leadership",
-    logo: "/assets/logos/download.jpg",
+    logo: "/assets/logos/ILP.png",
     title: "Leadership, Talent & Future Workforce",
     description:
       "Mengembangkan talenta dan kepemimpinan generasi penerus bangsa, membekali mereka dengan kompetensi yang relevan yang dibutuhkan saat ini.",
@@ -57,7 +57,7 @@ export const focusAreas: FocusArea[] = [
 
   {
     id: "agriculture",
-    logo: "/assets/logos/download.jpg",
+    logo: "/assets/logos/Mudatani.png",
     title: "Agripreneurship & Food Resilience",
     description:
       "Mendorong praktik pertanian berkelanjutan dan kesadaran ekologis di masyarakat untuk menjaga kelestarian alam dan menciptakan masa depan pangan lebih baik.",
@@ -66,7 +66,7 @@ export const focusAreas: FocusArea[] = [
   },
   {
     id: "creative",
-    logo: "/assets/logos/download.jpg",
+    logo: "/assets/logos/creafo.jpg",
     title: "Creative & Digital Economy",
     description:
       "Menyediaan layanan profesional dari para talenta kreatif-digital sehingga dapat mendorong sektor ekonomi kreatif tumbuh, lebih berkembang secara optimal.",
@@ -332,6 +332,11 @@ export const whyChooseAPR: FeatureCard[] = [
 ];
 
 export const partnerLogos: PartnerLogo[] = [
+  {
+    name: "Danantara",
+    industry: "Government",
+    logoUrl: "/assets/logos/danantara.png",
+  },
   {
     name: "BAZNAS",
     industry: "Government",

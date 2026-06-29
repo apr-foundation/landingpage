@@ -1,17 +1,4 @@
-import { PortfolioItem, VideoPortfolioItem } from "../types";
-
-import {
-  Users,
-  Award,
-  Sparkles,
-  Globe,
-  TrendingUp,
-  Leaf,
-  Sprout,
-  PenTool,
-  Zap,
-  Target,
-} from "lucide-react";
+import { VideoPortfolioItem } from "../types";
 
 // ============================================
 // SECTION 2: INDONESIA LEADERSHIP PROJECT (ILP)
@@ -19,9 +6,9 @@ import {
 
 export const leadershipData = {
   id: "leadership",
-  icon: "👑", // Bisa diganti dengan image/logo nanti
+  icon: "/assets/logos/ILP.png", // Bisa diganti dengan image/logo nanti
   title: "INDONESIA LEADERSHIP PROJECT",
-  badge: "Indonesia Leadership Project",
+  badge: "Indonesia Leadership Projecteee",
   description:
     "Indonesia Leadership Project adalah program pengembangan talenta komprehensif yang dirancang oleh APR Foundation untuk mencetak pemimpin-pemimpin masa depan Indonesia yang berdaya saing global. Program ini berfokus pada tiga pilar utama.",
   tags: ["Leadership", "Talent", "Future Workforce"],
@@ -47,40 +34,38 @@ export const leadershipData = {
   ],
   portfolio: [
     {
-      id: "ilp-gov-cohort-24",
-      title: "Sovereign Public Policy Cohort",
+      id: "government-leadership-training",
+      title: "Pelatihan Kepemimpinan Aparatur Pemerintah",
       subtitle:
-        "Nurturing 120 regional civil servants in South Jakarta in ethical decision-making, digital governance, and crisis communications.",
-      category: "Leadership",
+        "Membekali 120 aparatur sipil negara di Jakarta Selatan dengan kemampuan pengambilan keputusan yang etis, tata kelola digital, dan komunikasi krisis.",
+      category: "Kepemimpinan",
       image:
-        "https://images.unsplash.com/photo-1530595467537-0b5996c41f2d?auto=format&fit=crop&w=800&q=80",
+        "/assets/images/leadership/Hari Pahlawan, 10 November 2019. Pemuda hadir untuk menuliskan tinta emas sejarah masa depan bangsa.jpg",
       year: "2024",
       description:
-        "A 6-month simulation resulting in three municipal bills draft models that were formally reviewed by the regional parliament.",
+        "Program pengembangan kepemimpinan yang dirancang untuk meningkatkan kapasitas aparatur pemerintah melalui pembelajaran tentang kepemimpinan yang berintegritas, tata kelola digital, komunikasi strategis, dan pengambilan keputusan yang efektif.",
     },
     {
-      id: "ilp-tech-futures",
-      title: "Future Tech Executive Forum",
+      id: "baznas-santripreneur",
+      title: "Baznas Santripreneur",
       subtitle:
-        "High-caliber tech bootcamps in collaboration with the Nusantara Creative Guild targeting emerging engineering leads.",
+        "Program pemberdayaan santri melalui pelatihan kewirausahaan, pengembangan kepemimpinan, serta pendampingan dalam membangun usaha yang berkelanjutan.",
       category: "Talent",
-      image:
-        "https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&w=800&q=80",
+      image: "/assets/images/leadership/IMG_0147.jpg",
       year: "2023",
       description:
-        "Upskilling 85 tech team leads on cross-functional alignment, product strategy, and generative AI engineering.",
+        "Inisiatif pengembangan talenta bersama BAZNAS yang bertujuan membekali santri dengan keterampilan berwirausaha, pola pikir kepemimpinan, serta pengalaman praktis untuk menciptakan dampak ekonomi dan sosial yang berkelanjutan.",
     },
     {
-      id: "ilp-women-lead",
-      title: "Srikandi Leadership Academy",
+      id: "townhall-muda",
+      title: "Townhall Muda",
       subtitle:
-        "Empowering young women leaders from rural communities with entrepreneurial skills and financial independence blueprints.",
-      category: "Future Workforce",
-      image:
-        "https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?auto=format&fit=crop&w=800&q=80",
+        "Forum dialog interaktif yang mempertemukan pemuda, pemimpin, dan berbagai pemangku kepentingan untuk membahas isu kepemimpinan, inovasi, dan pembangunan masyarakat.",
+      category: "Komunitas",
+      image: "/assets/images/leadership/DSC00810.jpg",
       year: "2025",
       description:
-        "An accelerator program supporting 40 women-led social enterprises spanning arts, sustainable garments, and digital tutoring.",
+        "Kegiatan diskusi dan kolaborasi yang mendorong partisipasi aktif generasi muda dalam bertukar gagasan, membangun jejaring, serta menciptakan solusi inovatif bagi tantangan sosial dan pembangunan bangsa.",
     },
   ],
 };
@@ -91,7 +76,7 @@ export const leadershipData = {
 
 export const agricultureData = {
   id: "agriculture",
-  icon: "🌾",
+  icon: "/assets/logos/Mudatani.png",
   title: "REGENERATIVE AGRICULTURE",
   badge: "Mudatani",
   description:
@@ -120,30 +105,27 @@ export const agricultureData = {
   portfolio: [
     {
       id: "agri-biochar-2024",
-      title: "Java Biochar Cooperative Pilot",
+      title: "Perawatan Rutin",
       subtitle:
-        "Revitalizing 120 hectares of depleted volcanic soil using specialized biochar kilns.",
+        "Melaksanakan perawatan tanaman secara berkala melalui penyiraman, pemupukan, pengendalian hama, serta pemantauan pertumbuhan untuk menjaga produktivitas lahan.",
       category: "Agripreneurship",
-      image:
-        "https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?auto=format&fit=crop&w=800&q=80",
+      image: "assets/images/agriculture/DSC07862.JPG",
     },
     {
       id: "agri-urban-farms",
-      title: "Jakarta Rooftop Sovereignty",
+      title: "Panen Raya",
       subtitle:
-        "Pioneering micro-farming loops on concrete rooftops to combat food supply volatility.",
+        "Momentum panen bersama yang menampilkan hasil budidaya pertanian berkualitas sekaligus memperkuat kolaborasi antara petani, komunitas, dan mitra.",
       category: "Food Resilience",
-      image:
-        "https://images.unsplash.com/photo-1530595467537-0b5996c41f2d?auto=format&fit=crop&w=800&q=80",
+      image: "assets/images/agriculture/DSC07867.JPG",
     },
     {
       id: "agri-organic-cocoa",
-      title: "Sulawesi Organic Cocoa Regeneration",
+      title: "Pemasaran Hasil Pertanian",
       subtitle:
-        "Upskilling 200 smallholder cocoa farmers in regenerative composting and fair trade export protocols.",
+        "Mendukung petani dalam memperluas akses pasar melalui strategi pemasaran, peningkatan nilai tambah produk, serta kemitraan dengan berbagai sektor.",
       category: "Agripreneurship",
-      image:
-        "https://images.unsplash.com/photo-1589156280159-27698a70f29e?auto=format&fit=crop&w=800&q=80",
+      image: "assets/images/agriculture/DSC07886.JPG",
     },
   ],
 };
@@ -154,7 +136,7 @@ export const agricultureData = {
 
 export const creativeData = {
   id: "creative",
-  icon: "🎨",
+  icon: "/assets/logos/creafo.jpg",
   title: "CREATIVE MANAGEMENT",
   badge: "Creafo",
   description:
@@ -183,39 +165,35 @@ export const creativeData = {
   portfolio: [
     {
       id: "creative-marta-agri",
-      title: '"Nafas Bumi" Social Campaign',
+      title: "ID Next Leader",
       subtitle:
-        "An Instagram and TikTok digital narrative campaign explaining soil health mechanics directly to urban Gen-Z.",
-      category: "Creative",
-      image:
-        "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=800&q=80",
+        "Konten media sosial yang mengangkat semangat kepemimpinan generasi muda melalui edukasi, inspirasi, dan pengembangan karakter untuk menciptakan pemimpin masa depan Indonesia.",
+      category: "Social Media",
+      image: "/assets/images/social-media/idnl.jpeg",
     },
     {
       id: "creative-jakarta-green",
-      title: "Jakarta Green Initiative Brand Kit",
+      title: "Dedikasi Untuk Negeri",
       subtitle:
-        "Developing standard corporate visual systems, website designs, and communications manuals for green tech NGOs.",
-      category: "Digital Economy",
-      image:
-        "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=800&q=80",
+        "Publikasi digital yang menampilkan kisah pengabdian, kontribusi, dan inspirasi individu maupun komunitas dalam memberikan dampak positif bagi masyarakat dan bangsa.",
+      category: "Social Media",
+      image: "/assets/images/social-media/dedikasi-untuk-negeri.jpeg",
     },
     {
       id: "creative-craftsmen-indonesia",
-      title: "Indigenous Craftsmen Visual Archive",
+      title: "Beasiswa 10000",
       subtitle:
-        "A high-definition video archive and photographic index cataloging vanishing handcrafting techniques in Kalimantan.",
-      category: "Creative",
-      image:
-        "https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?auto=format&fit=crop&w=800&q=80",
+        "Konten informatif mengenai program beasiswa yang bertujuan memperluas akses pendidikan, memberikan informasi pendaftaran, serta mendorong lebih banyak generasi muda meraih kesempatan belajar.",
+      category: "Social Media",
+      image: "/assets/images/social-media/beasiswa-10000.jpeg",
     },
     {
       id: "creative-craftsmen-indonesia-test",
-      title: "Indigenous Craftsmen Visual Archive",
+      title: "Rumah Tempe Indonesia",
       subtitle:
-        "A high-definition video archive and photographic index cataloging vanishing handcrafting techniques in Kalimantan.",
-      category: "Creative",
-      image:
-        "https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?auto=format&fit=crop&w=800&q=80",
+        "Konten promosi dan edukasi yang memperkenalkan inovasi produk olahan tempe, proses produksi, serta pemberdayaan masyarakat melalui pengembangan industri pangan lokal.",
+      category: "Social Media",
+      image: "/assets/images/social-media/rumah-tempe-indonesia.jpeg",
     },
   ],
 };
@@ -233,35 +211,68 @@ export const portfolioSections = {
 export const videoPortfolio: VideoPortfolioItem[] = [
   {
     id: "vid-manifesto-25",
-    title: "APR Foundation Corporate TVC 2025",
+    title: "Waste to Energy - Danantara Indonesia",
     description:
-      "Our annual profile piece showcasing live agricultural fields in Java, class cohorts in Jakarta, and testimonials from public leadership figures.",
+      "Video corporate yang menampilkan solusi pengelolaan limbah menjadi energi berkelanjutan melalui inovasi teknologi, kolaborasi, dan komitmen terhadap pembangunan ramah lingkungan.",
     category: "Corporate TVC",
     thumbnail:
-      "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=1200&q=80",
-    youtubeId: "dQw4w9WgXcQ", // Placeholder URL trigger or beautiful embedded modal play
+      "assets/images/social-media/thumbnails/Waste to Energy - Danantara Indonesia.png",
+    youtubeId: "8STMlxAM0y0",
     duration: "2:45",
   },
   {
     id: "vid-agri-doc",
-    title: "“Generasi Bertani” Mini-Documentary",
+    title: "BAZNAS Santripreneur 2025 - Kluster Haji dan Umroh",
     description:
-      "A deep-dive look into how regional youth are bypassing office jobs to spearhead high-income organic soil franchises.",
+      "Video dokumentasi program Santripreneur yang menyoroti pengembangan kewirausahaan santri pada kluster Haji dan Umrah melalui pelatihan, pendampingan, dan kolaborasi bersama BAZNAS.",
     category: "Mini-Documentary",
     thumbnail:
-      "https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&w=1200&q=80",
-    youtubeId: "dQw4w9WgXcQ",
+      "assets/images/social-media/thumbnails/BAZNAS Santripreneur 2025 - Kluster Haji dan Umroh.png",
+    youtubeId: "6ngUEPZVFZs",
     duration: "12:15",
   },
   {
     id: "vid-leadership-keynote",
-    title: "Indonesia Leadership Summit Highlights",
+    title: "Video Profil Kemendukbangga/BKKBN RI",
     description:
-      "Highlighting top keynote addresses, panel debates, and pitch decks presented during our annual South Jakarta graduation gala.",
+      "Video profil institusi yang memperkenalkan visi, misi, program unggulan, serta kontribusi Kemendukbangga/BKKBN RI dalam pembangunan keluarga dan kependudukan di Indonesia.",
     category: "Event Profile",
     thumbnail:
-      "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=1200&q=80",
-    youtubeId: "dQw4w9WgXcQ",
+      "assets/images/social-media/thumbnails/Video Profil KemendukbanggaBKKBN RI.png",
+    youtubeId: "X66VfLXYV_4",
+    duration: "4:20",
+  },
+  {
+    id: "vid-leadership-keynote2",
+    title: "Teaser Townhall Muda - Sustainable Energy",
+    description:
+      "Video teaser yang mengajak generasi muda untuk berpartisipasi dalam forum Townhall Muda dengan tema energi berkelanjutan melalui diskusi, kolaborasi, dan inovasi.",
+    category: "Event Profile",
+    thumbnail:
+      "assets/images/social-media/thumbnails/Teaser Townhall Muda - Sustainable Energy.png",
+    youtubeId: "NOjF8rzmKU4",
+    duration: "4:20",
+  },
+  {
+    id: "vid-leadership-keynote3",
+    title: "Duta Wisata Kabupaten Cilacap",
+    description:
+      "Video profil yang menampilkan potensi pariwisata, budaya, serta peran Duta Wisata Kabupaten Cilacap dalam mempromosikan destinasi dan kearifan lokal.",
+    category: "Event Profile",
+    thumbnail:
+      "assets/images/social-media/thumbnails/Duta Wisata Kabupaten Cilacap.png",
+    youtubeId: "pLYLRlrwhBo",
+    duration: "4:20",
+  },
+  {
+    id: "vid-leadership-keynote4",
+    title: "UMKM Bangkit dari Pandemi",
+    description:
+      "Video inspiratif yang mengangkat kisah kebangkitan pelaku UMKM melalui inovasi, adaptasi digital, dan semangat kolaborasi dalam menghadapi tantangan pascapandemi.",
+    category: "Event Profile",
+    thumbnail:
+      "assets/images/social-media/thumbnails/UMKM Bangkit dari Pandemi.png",
+    youtubeId: "RKP7ZGxO9Vw",
     duration: "4:20",
   },
 ];

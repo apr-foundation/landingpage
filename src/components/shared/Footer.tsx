@@ -32,9 +32,9 @@ export default function Footer() {
       <div className="absolute top-1/2 -right-40 w-96 h-96 bg-secondary-purple/10 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12 mb-16">
           {/* Brand Info */}
-          <div className="flex flex-col space-y-5">
+          <div className="flex flex-col space-y-5 ">
             <div className="flex items-center space-x-3">
               <Image
                 src={"/assets/logos/Logo APR.png"}
@@ -51,7 +51,7 @@ export default function Footer() {
             </p>
             <div className="flex items-center space-x-3.5">
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/company/aprfoundation"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full bg-gray-900 border border-gray-800 hover:border-primary-teal hover:text-primary-teal flex items-center justify-center transition-colors duration-300 cursor-pointer"
@@ -59,7 +59,7 @@ export default function Footer() {
                 <Linkedin className="w-4 h-4" />
               </a>
               <a
-                href="https://instagram.com"
+                href="https://instagram.com/aprfoundation"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full bg-gray-900 border border-gray-800 hover:border-secondary-purple hover:text-secondary-purple flex items-center justify-center transition-colors duration-300 cursor-pointer"
@@ -70,7 +70,7 @@ export default function Footer() {
           </div>
 
           {/* Quick Links */}
-          <div className="flex flex-col space-y-5">
+          <div className="flex flex-col space-y-5 ">
             <h4 className="text-white font-semibold font-sans text-sm uppercase tracking-wider border-l-2 border-primary-teal pl-3">
               Quick Navigation
             </h4>
@@ -111,11 +111,11 @@ export default function Footer() {
           </div>
 
           {/* Contact Details */}
-          <div className="flex flex-col space-y-5 lg:col-span-2">
+          <div className="flex flex-col space-y-5 lg:col-span-2 ">
             <h4 className="text-white font-semibold font-sans text-sm uppercase tracking-wider border-l-2 border-primary-blue pl-3">
               Headquarters & Contact
             </h4>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-sm text-gray-400">
+            <div className="grid  gap-6 text-sm text-gray-400 ">
               <div className="flex flex-col space-y-3">
                 <div className="flex items-start space-x-3">
                   <MapPin className="w-5 h-5 text-primary-teal shrink-0 mt-0.5" />
@@ -132,7 +132,7 @@ export default function Footer() {
                 </div>
               </div>
 
-              <div className="flex flex-col space-y-3">
+              {/* <div className="flex flex-col space-y-3">
                 <div className="flex items-start space-x-3">
                   <Phone className="w-5 h-5 text-secondary-purple shrink-0 mt-0.5" />
                   <div className="flex flex-col">
@@ -156,7 +156,7 @@ export default function Footer() {
                     </a>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

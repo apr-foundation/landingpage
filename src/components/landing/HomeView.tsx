@@ -117,16 +117,6 @@ export default function HomeView() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             {/* Left Column: Headline and CTAs */}
             <div className="lg:col-span-7 flex flex-col space-y-6 md:space-y-8 text-left">
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-                className="inline-flex items-center space-x-2.5 px-3 py-2 rounded-full text-xs sm:text-sm font-semibold bg-gradient-to-r from-primary-teal/10 to-primary-blue/10 text-primary-blue border border-primary-teal/25 shadow-sm w-max"
-              >
-                <Sparkles className="w-4 h-4 text-primary-teal animate-spin-slow " />
-                <span>APR Foundation</span>
-              </motion.div>
-
               <motion.h1
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -171,7 +161,10 @@ export default function HomeView() {
               >
                 <Button
                   variant="primary"
-                  onClick={() => setActiveTab("programs")}
+                  onClick={() => {
+                    setActiveTab("programs");
+                    window.location.href = "/programs";
+                  }}
                 >
                   Explore Programs & Services
                 </Button>
@@ -192,7 +185,7 @@ export default function HomeView() {
               >
                 <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                   <img
-                    src="https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=800&h=800&q=80"
+                    src="/assets/images/leadership/background2.jpg"
                     alt="APR Foundation Activities"
                     className="w-full h-auto object-cover"
                   />
@@ -205,24 +198,6 @@ export default function HomeView() {
                     <p className="text-white font-medium text-sm text-center">
                       Membangun Masa Depan Indonesia
                     </p>
-                  </div>
-                </div>
-              </motion.div>
-
-              {/* Floating badges */}
-              <motion.div
-                initial={{ x: 60, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-                className="absolute -top-6 -right-4 md:-right-8 p-4 rounded-2xl glass-effect shadow-lg border border-white/50 max-w-[200px] flex items-center space-x-3 select-none"
-              >
-                <div className="p-3 rounded-xl bg-emerald-500/15 text-emerald-600">
-                  <Award className="w-5 h-5" />
-                </div>
-                <div className="text-left">
-                  <div className="text-xs text-gray-400 font-mono">PILOTS</div>
-                  <div className="font-extrabold text-sm text-gray-900 leading-tight">
-                    100% Organic
                   </div>
                 </div>
               </motion.div>
@@ -264,7 +239,7 @@ export default function HomeView() {
               <div className="relative rounded-[2rem] overflow-hidden shadow-2xl">
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-950/40 via-transparent to-transparent z-10" />
                 <img
-                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80"
+                  src="/assets/images/leadership/Hari Pahlawan, 10 November 2019. Pemuda hadir untuk menuliskan tinta emas sejarah masa depan bangsa.jpg"
                   alt="APR Foundation Team Session"
                   className="w-full object-cover aspect-4/5 hover:scale-102 transition-transform duration-700"
                 />
@@ -379,11 +354,6 @@ export default function HomeView() {
                 className="glass-card bento-item p-8 rounded-[2rem] text-left flex flex-col justify-between group shadow-sm"
               >
                 <div>
-                  <div
-                    className={`w-14 h-14 rounded-2xl bg-gradient-to-tr ${area.gradient} flex items-center justify-center text-white mb-6 shadow-md shadow-gray-200/50`}
-                  >
-                    {getFocusIcon(area.icon, "w-7 h-7")}
-                  </div>
                   <Image
                     src={area.logo}
                     alt={area.title}
