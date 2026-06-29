@@ -13,8 +13,31 @@ export const metadata: Metadata = {
   title: "APR Foundation",
   description:
     "APR Foundation merupakan ekosistem pengembangan SDM & Organisasi berbasis kolaborasi multipihak, dengan pengalaman langsung menangani program pemerintah, korporasi, dan komunitas akar rumput di Indonesia.",
-};
 
+  applicationName: "APR Foundation",
+
+  appleWebApp: {
+    title: "APR Foundation",
+  },
+
+  icons: {
+    icon: [
+      {
+        url: "/assets/favicons/favicon-96x96.png",
+        sizes: "96x96",
+        type: "image/png",
+      },
+      {
+        url: "/assets/favicons/favicon.svg",
+        type: "image/svg+xml",
+      },
+    ],
+    shortcut: "/assets/favicons/favicon.ico",
+    apple: "/assets/favicons/apple-touch-icon.png",
+  },
+
+  manifest: "/assets/favicons/site.webmanifest",
+};
 export default function RootLayout({
   children,
 }: {
