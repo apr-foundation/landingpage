@@ -46,7 +46,7 @@ export const statsData: StatItem[] = [
 
 export const focusAreas: FocusArea[] = [
   {
-    id: "leadership",
+    id: "leadership", // ID ini match dengan terjemahan
     logo: "/assets/logos/ILP.png",
     title: "Leadership, Talent & Future Workforce",
     description:
@@ -54,9 +54,8 @@ export const focusAreas: FocusArea[] = [
     icon: "Compass",
     gradient: "from-[#34A8B8] to-[#3C569E]",
   },
-
   {
-    id: "agriculture",
+    id: "agriculture", // ID ini match dengan terjemahan
     logo: "/assets/logos/Mudatani.png",
     title: "Agripreneurship & Food Resilience",
     description:
@@ -65,7 +64,7 @@ export const focusAreas: FocusArea[] = [
     gradient: "from-[#10B981] to-[#34A8B8]",
   },
   {
-    id: "creative",
+    id: "creative", // ID ini match dengan terjemahan
     logo: "/assets/logos/creafo.jpg",
     title: "Creative & Digital Economy",
     description:

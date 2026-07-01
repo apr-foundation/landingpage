@@ -43,7 +43,21 @@
   "focusAreas": {
     "badge": "CORE FOCUS AREAS",
     "title": "APR Focus Areas: Key Fields of Change",
-    "subtitle": "APR has a strong commitment to creating positive change in various sectors crucial for Indonesia's future."
+    "subtitle": "APR has a strong commitment to creating positive change in various sectors crucial for Indonesia's future.",
+    "items": {
+      "leadership": {
+        "title": "Leadership, Talent & Future Workforce",
+        "description": "Developing the talents and leadership of the nation's next generation, equipping them with relevant competencies needed today."
+      },
+      "agriculture": {
+        "title": "Agripreneurship & Food Resilience",
+        "description": "Promoting sustainable agricultural practices and ecological awareness in communities to preserve nature and create a better food future."
+      },
+      "creative": {
+        "title": "Creative & Digital Economy",
+        "description": "Providing professional services from creative-digital talents to drive the creative economy sector to grow and develop optimally."
+      }
+    }
   },
   "visionMission": {
     "badge": "OUR COMPASS",

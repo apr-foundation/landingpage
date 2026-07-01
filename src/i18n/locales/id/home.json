@@ -43,7 +43,21 @@
   "focusAreas": {
     "badge": "FOKUS UTAMA",
     "title": "Fokus Isu APR: Bidang Utama Perubahan",
-    "subtitle": "APR memiliki komitmen kuat untuk menciptakan perubahan positif di berbagai sektor yang krusial bagi masa depan Indonesia."
+    "subtitle": "APR memiliki komitmen kuat untuk menciptakan perubahan positif di berbagai sektor yang krusial bagi masa depan Indonesia.",
+    "items": {
+      "leadership": {
+        "title": "Leadership, Talent & Future Workforce",
+        "description": "Mengembangkan talenta dan kepemimpinan generasi penerus bangsa, membekali mereka dengan kompetensi yang relevan yang dibutuhkan saat ini."
+      },
+      "agriculture": {
+        "title": "Agripreneurship & Food Resilience",
+        "description": "Mendorong praktik pertanian berkelanjutan dan kesadaran ekologis di masyarakat untuk menjaga kelestarian alam dan menciptakan masa depan pangan lebih baik."
+      },
+      "creative": {
+        "title": "Creative & Digital Economy",
+        "description": "Menyediaan layanan profesional dari para talenta kreatif-digital sehingga dapat mendorong sektor ekonomi kreatif tumbuh, lebih berkembang secara optimal."
+      }
+    }
   },
   "visionMission": {
     "badge": "KOMPAS KAMI",

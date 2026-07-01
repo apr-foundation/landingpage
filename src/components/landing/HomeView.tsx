@@ -39,6 +39,14 @@ export default function HomeView({ setActiveTab, t }: HomeViewProps) {
       description: translated?.description || member.description,
     };
   };
+
+  const getTranslatedFocusArea = (area: any) => {
+    const translated = t.focusAreas?.items?.[area.id];
+    return {
+      title: translated?.title || area.title,
+      description: translated?.description || area.description,
+    };
+  };
   // Custom helper untuk icon statistics
   const getStatIcon = (iconName: string) => {
     switch (iconName) {
@@ -306,38 +314,43 @@ export default function HomeView({ setActiveTab, t }: HomeViewProps) {
           />
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
-            {focusAreas.map((area, idx) => (
-              <motion.div
-                key={area.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{
-                  duration: 0.6,
-                  delay: idx * 0.1,
-                  ease: [0.16, 1, 0.3, 1],
-                }}
-                whileHover={{ y: -6 }}
-                className="glass-card bento-item p-8 rounded-[2rem] text-left flex flex-col justify-between group shadow-sm"
-              >
-                <div>
-                  <Image
-                    src={area.logo}
-                    alt={area.title}
-                    width={area.logo == "/assets/logos/Mudatani.png" ? 100 : 65}
-                    height={
-                      area.logo == "/assets/logos/Mudatani.png" ? 100 : 65
-                    }
-                  />
-                  <h3 className="text-xl sm:text-2xl font-extrabold text-gray-950 tracking-tight my-3 font-sans">
-                    {area.title}
-                  </h3>
-                  <p className="text-sm text-gray-500 leading-relaxed font-sans">
-                    {area.description}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
+            {focusAreas.map((area, idx) => {
+              const translated = getTranslatedFocusArea(area);
+              return (
+                <motion.div
+                  key={area.id}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-100px" }}
+                  transition={{
+                    duration: 0.6,
+                    delay: idx * 0.1,
+                    ease: [0.16, 1, 0.3, 1],
+                  }}
+                  whileHover={{ y: -6 }}
+                  className="glass-card bento-item p-8 rounded-[2rem] text-left flex flex-col justify-between group shadow-sm"
+                >
+                  <div>
+                    <Image
+                      src={area.logo}
+                      alt={translated.title}
+                      width={
+                        area.logo == "/assets/logos/Mudatani.png" ? 100 : 65
+                      }
+                      height={
+                        area.logo == "/assets/logos/Mudatani.png" ? 100 : 65
+                      }
+                    />
+                    <h3 className="text-xl sm:text-2xl font-extrabold text-gray-950 tracking-tight my-3 font-sans">
+                      {translated.title}
+                    </h3>
+                    <p className="text-sm text-gray-500 leading-relaxed font-sans">
+                      {translated.description}
+                    </p>
+                  </div>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>
