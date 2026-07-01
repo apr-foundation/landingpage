@@ -248,14 +248,15 @@ export default function HomeView() {
               {/* Overlay Glass Stat */}
               <div className="absolute -bottom-8 right-6 p-6 rounded-[2rem] glass-card bento-item shadow-xl text-left max-w-[260px]">
                 <p className="text-xs text-gray-800 font-mono tracking-wider mb-1.5 uppercase font-bold">
-                  FOUNDED IN
+                  EKOSISTEM
                 </p>
                 <p className="text-2xl font-extrabold text-gray-900 leading-tight">
-                  South Jakarta
+                  KOLABORATIF
                 </p>
                 <p className="text-xs text-gray-800 mt-2">
-                  Serving communities with biological science and ethical
-                  governance frameworks.
+                  Membangun SDM Unggul Indonesia yang menghubungkan pemerintah,
+                  korporasi, dan komunitas untuk menciptakan dampak yang
+                  berkelanjutan.
                 </p>
               </div>
             </div>
@@ -277,7 +278,7 @@ export default function HomeView() {
               </p>
               <p className="font-bold">
                 Tagline Kami:{" "}
-                <strong className="gradient-text-primary ">
+                <strong className="gradient-text-primary">
                   Create Your Force, Shape The Future!
                 </strong>
               </p>
@@ -357,8 +358,10 @@ export default function HomeView() {
                   <Image
                     src={area.logo}
                     alt={area.title}
-                    width={64}
-                    height={64}
+                    width={area.logo == "/assets/logos/Mudatani.png" ? 100 : 65}
+                    height={
+                      area.logo == "/assets/logos/Mudatani.png" ? 100 : 65
+                    }
                   />
                   <h3 className="text-xl sm:text-2xl font-extrabold text-gray-950 tracking-tight my-3 font-sans">
                     {area.title}

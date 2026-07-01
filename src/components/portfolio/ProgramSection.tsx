@@ -120,7 +120,11 @@ const ProgramSection = ({ data = {}, variant = "leadership" }: any) => {
         </div>
 
         {/* Pillars */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-14">
+        <div
+          className={`grid grid-cols-1 md:grid-cols-2 ${
+            isCreative ? "lg:grid-cols-2" : "lg:grid-cols-3"
+          }  gap-6 mb-14`}
+        >
           {pillars.map((pillar: any, idx: number) => (
             <motion.div
               key={pillar.id}
@@ -150,96 +154,103 @@ const ProgramSection = ({ data = {}, variant = "leadership" }: any) => {
         </div>
 
         {/* Portfolio Grid - dengan styling yang ditukar */}
-        <div
-          className={`grid ${getGridColumns()} gap-4 md:gap-6 lg:gap-8 justify-items-center`}
-        >
-          {portfolio.map((item: any, idx: number) => (
-            <motion.div
-              key={item.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-80px" }}
-              transition={{
-                duration: 0.6,
-                delay: idx * 0.1,
-                ease: [0.16, 1, 0.3, 1],
-              }}
-              whileHover={{ y: -4 }}
-              className={`group flex flex-col justify-between rounded-[2rem] overflow-hidden glass-card bento-item text-left shadow-sm w-full ${
-                useAgricultureStyle ? getAspectRatio() : ""
-              }`}
-            >
-              {useAgricultureStyle ? (
-                // Gaya Agriculture (sebelumnya untuk agriculture, sekarang digunakan untuk creative)
-                <>
-                  <div className="relative w-full h-full">
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                      className="w-full h-full object-cover group-hover:scale-104 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/40 to-transparent flex flex-col justify-end p-4 sm:p-6 text-left opacity-90 sm:opacity-75 group-hover:opacity-95 transition-opacity duration-300">
-                      <span className="inline-flex items-center space-x-1.5 text-[8px] sm:text-[10px] font-mono tracking-wider font-bold text-emerald-400 uppercase mb-1 sm:mb-2">
-                        <Sprout className="w-2.5 h-2.5 sm:w-3 sm:h-3" />
-                        <span>{item.category}</span>
-                      </span>
-                      <h3 className="text-white font-extrabold text-sm sm:text-base lg:text-lg tracking-tight mb-0.5 sm:mb-1">
+        <div>
+          {isCreative && (
+            <h2 className="text-3xl sm:text-4xl font-extrabold gradient-text-primary tracking-tight font-sans mb-12">
+              Portfolio Social Media Management
+            </h2>
+          )}
+          <div
+            className={`grid ${getGridColumns()} gap-4 md:gap-6 lg:gap-8 justify-items-center`}
+          >
+            {portfolio.map((item: any, idx: number) => (
+              <motion.div
+                key={item.id}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-80px" }}
+                transition={{
+                  duration: 0.6,
+                  delay: idx * 0.1,
+                  ease: [0.16, 1, 0.3, 1],
+                }}
+                whileHover={{ y: -4 }}
+                className={`group flex flex-col justify-between rounded-[2rem] overflow-hidden glass-card bento-item text-left shadow-sm w-full ${
+                  useAgricultureStyle ? getAspectRatio() : ""
+                }`}
+              >
+                {useAgricultureStyle ? (
+                  // Gaya Agriculture (sebelumnya untuk agriculture, sekarang digunakan untuk creative)
+                  <>
+                    <div className="relative w-full h-full">
+                      <img
+                        src={item.image}
+                        alt={item.title}
+                        className="w-full h-full object-cover group-hover:scale-104 transition-transform duration-500"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/40 to-transparent flex flex-col justify-end p-4 sm:p-6 text-left opacity-90 sm:opacity-75 group-hover:opacity-95 transition-opacity duration-300">
+                        <span className="inline-flex items-center space-x-1.5 text-[8px] sm:text-[10px] font-mono tracking-wider font-bold text-emerald-400 uppercase mb-1 sm:mb-2">
+                          <Sprout className="w-2.5 h-2.5 sm:w-3 sm:h-3" />
+                          <span>{item.category}</span>
+                        </span>
+                        <h3 className="text-white font-extrabold text-sm sm:text-base lg:text-lg tracking-tight mb-0.5 sm:mb-1">
+                          {item.title}
+                        </h3>
+                        <p className="text-[10px] sm:text-xs text-gray-300 leading-normal max-h-0 group-hover:max-h-16 overflow-hidden transition-all duration-300 ease-in-out">
+                          {item.subtitle}
+                        </p>
+                      </div>
+                    </div>
+                  </>
+                ) : (
+                  // Gaya Card (sebelumnya untuk leadership & creative, sekarang untuk agriculture)
+                  <>
+                    <div className="overflow-hidden aspect-video relative bg-gray-100">
+                      <img
+                        src={item.image}
+                        alt={item.title}
+                        className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-500"
+                      />
+
+                      <div
+                        className={`absolute top-3 left-3 px-2.5 py-1 rounded-md text-[10px] font-mono font-bold bg-white/90 backdrop-blur-md ${
+                          useCreativeStyle
+                            ? "text-secondary-purple"
+                            : "text-primary-blue"
+                        } shadow-sm`}
+                      >
+                        {item.category}
+                      </div>
+                    </div>
+
+                    <div className="p-6">
+                      {!useCreativeStyle && (
+                        <div className="flex items-center space-x-2 text-xs text-gray-400 font-mono mb-2">
+                          <Calendar className="w-3.5 h-3.5 text-primary-teal" />
+                          <span>Year: {item.year}</span>
+                        </div>
+                      )}
+                      <h3
+                        className={`text-lg font-bold text-gray-950 mb-2 leading-snug group-hover:text-${
+                          useCreativeStyle ? "secondary-purple" : "primary-blue"
+                        } transition-colors`}
+                      >
                         {item.title}
                       </h3>
-                      <p className="text-[10px] sm:text-xs text-gray-300 leading-normal max-h-0 group-hover:max-h-16 overflow-hidden transition-all duration-300 ease-in-out">
+                      <p className="text-xs sm:text-sm text-gray-500 leading-relaxed font-sans mb-3 font-medium">
                         {item.subtitle}
                       </p>
+                      {item.description && (
+                        <p className="text-xs text-gray-400 leading-relaxed font-sans border-t border-gray-100 pt-3.5">
+                          {item.description}
+                        </p>
+                      )}
                     </div>
-                  </div>
-                </>
-              ) : (
-                // Gaya Card (sebelumnya untuk leadership & creative, sekarang untuk agriculture)
-                <>
-                  <div className="overflow-hidden aspect-video relative bg-gray-100">
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                      className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-500"
-                    />
-
-                    <div
-                      className={`absolute top-3 left-3 px-2.5 py-1 rounded-md text-[10px] font-mono font-bold bg-white/90 backdrop-blur-md ${
-                        useCreativeStyle
-                          ? "text-secondary-purple"
-                          : "text-primary-blue"
-                      } shadow-sm`}
-                    >
-                      {item.category}
-                    </div>
-                  </div>
-
-                  <div className="p-6">
-                    {!useCreativeStyle && (
-                      <div className="flex items-center space-x-2 text-xs text-gray-400 font-mono mb-2">
-                        <Calendar className="w-3.5 h-3.5 text-primary-teal" />
-                        <span>Year: {item.year}</span>
-                      </div>
-                    )}
-                    <h3
-                      className={`text-lg font-bold text-gray-950 mb-2 leading-snug group-hover:text-${
-                        useCreativeStyle ? "secondary-purple" : "primary-blue"
-                      } transition-colors`}
-                    >
-                      {item.title}
-                    </h3>
-                    <p className="text-xs sm:text-sm text-gray-500 leading-relaxed font-sans mb-3 font-medium">
-                      {item.subtitle}
-                    </p>
-                    {item.description && (
-                      <p className="text-xs text-gray-400 leading-relaxed font-sans border-t border-gray-100 pt-3.5">
-                        {item.description}
-                      </p>
-                    )}
-                  </div>
-                </>
-              )}
-            </motion.div>
-          ))}
+                  </>
+                )}
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

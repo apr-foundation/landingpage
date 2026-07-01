@@ -44,11 +44,11 @@ export const metadata: Metadata = {
     title: "APR Foundation",
     description:
       "APR Foundation merupakan ekosistem pengembangan SDM & Organisasi berbasis kolaborasi multipihak.",
-    url: "https://aprfoundation.id",
+    url: "https://aprfoundation.org",
     siteName: "APR Foundation",
     images: [
       {
-        url: "/assets/images/og-image.png", // 1200x630 px
+        url: "/assets/images/og-image.png",
         width: 1200,
         height: 630,
         alt: "APR Foundation",

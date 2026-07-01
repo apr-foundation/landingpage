@@ -155,12 +155,6 @@ export const creativeData = {
       description:
         "Membekali tiap talenta dengan pemahaman mendalam tentang ekosistem ekonomi digital, termasuk strategi pemasaran digital, monetisasi konten, pengembangan bisnis kreatif berbasis platform, serta tren industri yang terus berkembang.",
     },
-    {
-      id: 3,
-      title: "Creative Entrepreneurship",
-      description:
-        "Mendorong lahirnya pelaku usaha kreatif yang mampu mengubah ide menjadi produk dan layanan bernilai ekonomi melalui penguatan kemampuan bisnis, inovasi, kolaborasi, serta pemanfaatan teknologi digital.",
-    },
   ],
   portfolio: [
     {
