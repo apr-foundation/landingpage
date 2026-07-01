@@ -148,6 +148,7 @@ export const manifestoData = {
 
 export const teamMembers: TeamMember[] = [
   {
+    id: "aulia-pradipta", // Tambahkan ini
     name: "Aulia Pradipta",
     position: "Founder & Chief Executive Officer",
     description: "Memimpin visi dan strategi APR untuk impact sustainability.",
@@ -159,6 +160,7 @@ export const teamMembers: TeamMember[] = [
     },
   },
   {
+    id: "rosyad-al-ghani", // Tambahkan ini
     name: "M. Rosyad Al Ghani",
     position: "Advisor",
     description:
@@ -171,6 +173,7 @@ export const teamMembers: TeamMember[] = [
     },
   },
   {
+    id: "fatkhurrokhim", // Tambahkan ini
     name: "Fatkhurrokhim",
     position: "Advisor",
     description:
@@ -184,6 +187,7 @@ export const teamMembers: TeamMember[] = [
     },
   },
   {
+    id: "safriko-desna", // Tambahkan ini
     name: "Safriko Desna Putra",
     position: "Advisor",
     description:
@@ -197,6 +201,7 @@ export const teamMembers: TeamMember[] = [
     },
   },
   {
+    id: "elfina-dewi", // Tambahkan ini
     name: "Elfina Dewi Roseningrum",
     position: "Foundation Secretary",
     description: "Memimpin dan mendukung proses administratif.",
@@ -209,6 +214,7 @@ export const teamMembers: TeamMember[] = [
     },
   },
   {
+    id: "dwi-rahmanwati", // Tambahkan ini
     name: "Dwi Rahmawati Utami",
     position: "Foundation Treasury",
     description:
@@ -222,6 +228,7 @@ export const teamMembers: TeamMember[] = [
     },
   },
   {
+    id: "abdul-malik", // Tambahkan ini
     name: "Abdul Malik Fajar",
     position: "Creative Lead",
     description:
@@ -235,6 +242,7 @@ export const teamMembers: TeamMember[] = [
     },
   },
   {
+    id: "annisa-bulan", // Tambahkan ini
     name: "Annisa Bulan Dewi",
     position: "Talent Lead",
     description:
@@ -248,6 +256,7 @@ export const teamMembers: TeamMember[] = [
     },
   },
   {
+    id: "audri-syahroni", // Tambahkan ini
     name: "Audri Syahroni",
     position: "Agripreneurship Lead",
     description:
@@ -261,6 +270,7 @@ export const teamMembers: TeamMember[] = [
     },
   },
   {
+    id: "marta-fibriantika", // Tambahkan ini
     name: "Marta Fibriantika",
     position: "Partnership Lead",
     description:
@@ -274,6 +284,7 @@ export const teamMembers: TeamMember[] = [
     },
   },
   {
+    id: "dwi-maya", // Tambahkan ini
     name: "Dwi Maya Wijayanti",
     position: "Finance Lead",
     description: "Mengelola keuangan dan memastikan stabilitas operasional.",
@@ -286,10 +297,11 @@ export const teamMembers: TeamMember[] = [
     },
   },
   {
+    id: "jainal-abidin", // Tambahkan ini
     name: "Muhammad Jainal Abidin",
     position: " Project Officer",
     description:
-      "Mendukung operasional program dan memastikan deliverable tercapai dengan baik. ",
+      "Mendukung operasional program dan memastikan deliverable tercapai dengan baik.",
     image:
       "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=500&h=500&q=80",
     socials: {

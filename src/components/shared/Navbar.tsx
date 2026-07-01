@@ -12,8 +12,12 @@ import {
 } from "lucide-react";
 import Button from "./Button";
 import { useTab } from "@/context/TabContext";
+import { useLanguage } from "@/context/LanguageContext";
+import { useTranslation } from "@/hooks/useTranslation";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 interface NavbarProps {
   activeTab: string;
@@ -23,6 +27,10 @@ interface NavbarProps {
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { activeTab, setActiveTab } = useTab();
+  const { locale } = useLanguage();
+  const { t, loading } = useTranslation(locale, "navbar");
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -37,34 +45,71 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navItems = [
-    {
-      id: "home",
-      label: "Home",
-      icon: <Compass className="w-4 h-4" />,
-      href: "/",
-    },
-    {
-      id: "programs",
-      label: "Programs & Services",
-      icon: <Award className="w-4 h-4" />,
-      href: "/programs",
-    },
-    {
-      id: "portfolio",
-      label: "Portfolio",
-      icon: <Sprout className="w-4 h-4" />,
-      href: "/portfolio",
-    },
-  ];
+  // Navigation items dengan path yang sudah termasuk locale
+  const getNavItems = () => {
+    const baseItems = [
+      {
+        id: "home",
+        label: t?.home || "Home",
+        icon: <Compass className="w-4 h-4" />,
+        href: `/${locale}`,
+      },
+      {
+        id: "programs",
+        label: t?.programs || "Programs & Services",
+        icon: <Award className="w-4 h-4" />,
+        href: `/${locale}/programs`,
+      },
+      {
+        id: "portfolio",
+        label: t?.portfolio || "Portfolio",
+        icon: <Sprout className="w-4 h-4" />,
+        href: `/${locale}/portfolio`,
+      },
+    ];
+    return baseItems;
+  };
 
-  const { activeTab, setActiveTab } = useTab();
+  const navItems = getNavItems();
 
-  const handleNavClick = (id: string) => {
+  const handleNavClick = (id: string, href: string) => {
     setActiveTab(id);
     setIsMobileMenuOpen(false);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
+
+  // Get current tab from pathname
+  useEffect(() => {
+    const pathSegments = pathname.split("/");
+    const lastSegment = pathSegments[pathSegments.length - 1];
+    if (lastSegment === "" || lastSegment === locale) {
+      setActiveTab("home");
+    } else if (lastSegment === "programs") {
+      setActiveTab("programs");
+    } else if (lastSegment === "portfolio") {
+      setActiveTab("portfolio");
+    }
+  }, [pathname, locale, setActiveTab]);
+
+  if (loading) {
+    return (
+      <header className="fixed top-0 left-0 right-0 z-50 py-4 bg-white/70 backdrop-blur-xl border-b border-gray-200/40">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between">
+            <div className="w-32 h-12 bg-gray-200 animate-pulse rounded"></div>
+            <div className="hidden md:flex space-x-2">
+              {[1, 2, 3].map((i) => (
+                <div
+                  key={i}
+                  className="w-24 h-10 bg-gray-200 animate-pulse rounded-full"
+                ></div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </header>
+    );
+  }
 
   return (
     <>
@@ -83,7 +128,7 @@ export default function Navbar() {
           <div className="flex items-center justify-between">
             {/* Logo / Brandmark */}
             <button
-              onClick={() => handleNavClick("home")}
+              onClick={() => handleNavClick("home", `/${locale}`)}
               className="flex items-center space-x-3 group cursor-pointer focus:outline-none"
             >
               <div className="flex flex-col text-left">
@@ -104,7 +149,7 @@ export default function Navbar() {
                   <Link
                     href={item.href}
                     key={item.id}
-                    onClick={() => handleNavClick(item.id)}
+                    onClick={() => handleNavClick(item.id, item.href)}
                     className={`relative px-5 py-2 rounded-full text-sm font-medium transition-colors duration-300 focus:outline-none cursor-pointer ${
                       isActive
                         ? "text-gray-950"
@@ -131,8 +176,9 @@ export default function Navbar() {
               })}
             </nav>
 
-            {/* Header CTA Button (Desktop) */}
-            <div className="hidden md:block">
+            {/* Header CTA Button (Desktop) + Language Switcher */}
+            <div className="hidden md:flex items-center gap-3">
+              <LanguageSwitcher />
               <Button
                 variant="primary"
                 icon={
@@ -144,12 +190,13 @@ export default function Navbar() {
                 }}
                 className="group py-2 md:py-2.5 px-5 md:px-6"
               >
-                Collaborate
+                {t?.collaborate || "Collaborate"}
               </Button>
             </div>
 
             {/* Mobile Menu Button */}
-            <div className="md:hidden">
+            <div className="md:hidden flex items-center gap-2">
+              <LanguageSwitcher />
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 className="flex items-center justify-center p-2 rounded-xl bg-gray-100/80 text-gray-700 hover:bg-gray-200 transition-colors"
@@ -188,7 +235,7 @@ export default function Navbar() {
               <div className="flex flex-col space-y-8 mt-16">
                 <div className="flex flex-col space-y-4">
                   <div className="text-xs font-mono uppercase text-gray-400 tracking-widest border-b border-gray-100 pb-2">
-                    Navigation Menu
+                    {t?.navigationMenu || "Navigation Menu"}
                   </div>
                   {navItems.map((item) => {
                     const isActive = activeTab === item.id;
@@ -196,7 +243,7 @@ export default function Navbar() {
                       <Link
                         href={item.href}
                         key={item.id}
-                        onClick={() => handleNavClick(item.id)}
+                        onClick={() => handleNavClick(item.id, item.href)}
                         className={`flex items-center space-x-3 p-3.5 rounded-2xl text-left transition-all duration-300 ${
                           isActive
                             ? "bg-gradient-to-r from-primary-teal/10 to-primary-blue/10 text-primary-blue font-bold"
@@ -221,7 +268,7 @@ export default function Navbar() {
 
               <div className="flex flex-col space-y-4 pb-6">
                 <div className="text-xs font-mono uppercase text-gray-400 tracking-widest border-b border-gray-100 pb-2 mb-2">
-                  Ready to start?
+                  {t?.readyToStart || "Ready to start?"}
                 </div>
                 <Button
                   variant="primary"
@@ -231,7 +278,7 @@ export default function Navbar() {
                   }}
                   className="w-full text-center"
                 >
-                  Collaborate With Us
+                  {t?.collaborateWithUs || "Collaborate With Us"}
                 </Button>
                 <div className="text-center text-[10px] text-gray-400 font-mono">
                   info@aprfoundation.org

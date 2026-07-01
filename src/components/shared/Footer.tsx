@@ -1,6 +1,8 @@
 "use client";
 
 import { useTab } from "@/context/TabContext";
+import { useLanguage } from "@/context/LanguageContext";
+import { useTranslation } from "@/hooks/useTranslation";
 import {
   Mail,
   Phone,
@@ -11,9 +13,12 @@ import {
   ArrowUp,
 } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   const { setActiveTab } = useTab();
+  const { locale } = useLanguage();
+  const { t, loading } = useTranslation(locale, "footer");
 
   const handleQuickLinkClick = (tabId: string) => {
     setActiveTab(tabId);
@@ -23,6 +28,32 @@ export default function Footer() {
   const handleBackToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
+
+  if (loading) {
+    return (
+      <footer className="relative bg-gray-950 text-gray-300 pt-20 pb-10 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="animate-pulse">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12 mb-16">
+              <div>
+                <div className="h-12 w-32 bg-gray-800 rounded mb-4"></div>
+                <div className="h-4 w-full bg-gray-800 rounded mb-2"></div>
+                <div className="h-4 w-3/4 bg-gray-800 rounded"></div>
+              </div>
+              <div>
+                <div className="h-6 w-40 bg-gray-800 rounded mb-4"></div>
+                <div className="space-y-3">
+                  <div className="h-4 w-48 bg-gray-800 rounded"></div>
+                  <div className="h-4 w-56 bg-gray-800 rounded"></div>
+                  <div className="h-4 w-52 bg-gray-800 rounded"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    );
+  }
 
   return (
     <footer className="relative bg-gray-950 text-gray-300 pt-20 pb-10 overflow-hidden">
@@ -44,10 +75,8 @@ export default function Footer() {
               />
             </div>
             <p className="text-gray-400 text-sm leading-relaxed">
-              APR Foundation merupakan ekosistem pengembangan SDM & Organisasi
-              berbasis kolaborasi multipihak, dengan pengalaman langsung
-              menangani program pemerintah, korporasi, dan komunitas akar rumput
-              di Indonesia.
+              {t?.description ||
+                "APR Foundation merupakan ekosistem pengembangan SDM & Organisasi berbasis kolaborasi multipihak, dengan pengalaman langsung menangani program pemerintah, korporasi, dan komunitas akar rumput di Indonesia."}
             </p>
             <div className="flex items-center space-x-3.5">
               <a
@@ -72,39 +101,42 @@ export default function Footer() {
           {/* Quick Links */}
           <div className="flex flex-col space-y-5 ">
             <h4 className="text-white font-semibold font-sans text-sm uppercase tracking-wider border-l-2 border-primary-teal pl-3">
-              Quick Navigation
+              {t?.quickNavigation || "Quick Navigation"}
             </h4>
             <ul className="flex flex-col space-y-3.5 text-sm text-gray-400">
               <li>
-                <button
+                <Link
+                  href={`/${locale}`}
                   onClick={() => handleQuickLinkClick("home")}
                   className="hover:text-white transition-colors duration-250 cursor-pointer focus:outline-none"
                 >
-                  Home / Vision & Manifesto
-                </button>
+                  {t?.homeLink || "Home / Vision & Manifesto"}
+                </Link>
               </li>
               <li>
-                <button
+                <Link
+                  href={`/${locale}/programs`}
                   onClick={() => handleQuickLinkClick("programs")}
                   className="hover:text-white transition-colors duration-250 cursor-pointer focus:outline-none"
                 >
-                  Programs & Services (ILP, Agri)
-                </button>
+                  {t?.programsLink || "Programs & Services (ILP, Agri)"}
+                </Link>
               </li>
               <li>
-                <button
+                <Link
+                  href={`/${locale}/portfolio`}
                   onClick={() => handleQuickLinkClick("portfolio")}
                   className="hover:text-white transition-colors duration-250 cursor-pointer focus:outline-none"
                 >
-                  Portfolio Sprints & Galleries
-                </button>
+                  {t?.portfolioLink || "Portfolio Sprints & Galleries"}
+                </Link>
               </li>
               <li>
                 <a
                   href="mailto:info@aprfoundation.org"
                   className="hover:text-white transition-colors duration-250 cursor-pointer"
                 >
-                  Direct Inquiry (Email)
+                  {t?.inquiryLink || "Direct Inquiry (Email)"}
                 </a>
               </li>
             </ul>
@@ -113,13 +145,13 @@ export default function Footer() {
           {/* Contact Details */}
           <div className="flex flex-col space-y-5 lg:col-span-2 ">
             <h4 className="text-white font-semibold font-sans text-sm uppercase tracking-wider border-l-2 border-primary-blue pl-3">
-              Headquarters & Contact
+              {t?.headquarters || "Headquarters & Contact"}
             </h4>
-            <div className="grid  gap-6 text-sm text-gray-400 ">
+            <div className="grid gap-6 text-sm text-gray-400 ">
               <div className="flex flex-col space-y-3">
                 <div className="flex items-start space-x-3">
                   <MapPin className="w-5 h-5 text-primary-teal shrink-0 mt-0.5" />
-                  <span>South Jakarta, Indonesia</span>
+                  <span>{t?.address || "South Jakarta, Indonesia"}</span>
                 </div>
                 <div className="flex items-start space-x-3">
                   <Mail className="w-5 h-5 text-primary-blue shrink-0 mt-0.5" />
@@ -131,32 +163,6 @@ export default function Footer() {
                   </a>
                 </div>
               </div>
-
-              {/* <div className="flex flex-col space-y-3">
-                <div className="flex items-start space-x-3">
-                  <Phone className="w-5 h-5 text-secondary-purple shrink-0 mt-0.5" />
-                  <div className="flex flex-col">
-                    <span className="text-xs text-gray-500 font-mono">
-                      Aulia Rahman
-                    </span>
-                    <a
-                      href="tel:+6282134224947"
-                      className="hover:text-white transition-colors font-semibold"
-                    >
-                      +62 8213-4224-947
-                    </a>
-                    <span className="text-xs text-gray-500 font-mono mt-1.5">
-                      Marta Widjanarko
-                    </span>
-                    <a
-                      href="tel:+6281575238239"
-                      className="hover:text-white transition-colors font-semibold"
-                    >
-                      +62 8157-5238-239
-                    </a>
-                  </div>
-                </div>
-              </div> */}
             </div>
           </div>
         </div>
@@ -164,21 +170,21 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-gray-850 pt-8 flex flex-col sm:flex-row items-center justify-between space-y-4 sm:space-y-0">
           <p className="text-xs text-gray-500 text-center sm:text-left">
-            © {new Date().getFullYear()} APR Foundation. All Rights Reserved.
-            South Jakarta, Indonesia.
+            {t?.copyright ||
+              "© {year} APR Foundation. All Rights Reserved. South Jakarta, Indonesia."}
           </p>
           <div className="flex items-center space-x-6 text-xs text-gray-500">
             <a href="#" className="hover:text-gray-300 transition-colors">
-              Terms of Use
+              {t?.termsOfUse || "Terms of Use"}
             </a>
             <a href="#" className="hover:text-gray-300 transition-colors">
-              Privacy Policy
+              {t?.privacyPolicy || "Privacy Policy"}
             </a>
             <button
               onClick={handleBackToTop}
               className="flex items-center space-x-1.5 py-1.5 px-3 rounded-lg bg-gray-900 border border-gray-850 hover:bg-gray-850 hover:text-white transition-all text-xs font-semibold focus:outline-none cursor-pointer"
             >
-              <span>Back to top</span>
+              <span>{t?.backToTop || "Back to top"}</span>
               <ArrowUp className="w-3.5 h-3.5 animate-bounce" />
             </button>
           </div>

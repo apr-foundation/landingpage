@@ -109,7 +109,7 @@ export const agricultureData = {
       subtitle:
         "Melaksanakan perawatan tanaman secara berkala melalui penyiraman, pemupukan, pengendalian hama, serta pemantauan pertumbuhan untuk menjaga produktivitas lahan.",
       category: "Agripreneurship",
-      image: "assets/images/agriculture/DSC07862.JPG",
+      image: "/assets/images/agriculture/DSC07862.JPG",
     },
     {
       id: "agri-urban-farms",
@@ -117,7 +117,7 @@ export const agricultureData = {
       subtitle:
         "Momentum panen bersama yang menampilkan hasil budidaya pertanian berkualitas sekaligus memperkuat kolaborasi antara petani, komunitas, dan mitra.",
       category: "Food Resilience",
-      image: "assets/images/agriculture/DSC07867.JPG",
+      image: "/assets/images/agriculture/DSC07867.JPG",
     },
     {
       id: "agri-organic-cocoa",
@@ -125,7 +125,7 @@ export const agricultureData = {
       subtitle:
         "Mendukung petani dalam memperluas akses pasar melalui strategi pemasaran, peningkatan nilai tambah produk, serta kemitraan dengan berbagai sektor.",
       category: "Agripreneurship",
-      image: "assets/images/agriculture/DSC07886.JPG",
+      image: "/assets/images/agriculture/DSC07886.JPG",
     },
   ],
 };
@@ -210,7 +210,7 @@ export const videoPortfolio: VideoPortfolioItem[] = [
       "Video corporate yang menampilkan solusi pengelolaan limbah menjadi energi berkelanjutan melalui inovasi teknologi, kolaborasi, dan komitmen terhadap pembangunan ramah lingkungan.",
     category: "Corporate TVC",
     thumbnail:
-      "assets/images/social-media/thumbnails/Waste to Energy - Danantara Indonesia.png",
+      "/assets/images/social-media/thumbnails/Waste to Energy - Danantara Indonesia.png",
     youtubeId: "8STMlxAM0y0",
     duration: "2:45",
   },
@@ -221,7 +221,7 @@ export const videoPortfolio: VideoPortfolioItem[] = [
       "Video dokumentasi program Santripreneur yang menyoroti pengembangan kewirausahaan santri pada kluster Haji dan Umrah melalui pelatihan, pendampingan, dan kolaborasi bersama BAZNAS.",
     category: "Mini-Documentary",
     thumbnail:
-      "assets/images/social-media/thumbnails/BAZNAS Santripreneur 2025 - Kluster Haji dan Umroh.png",
+      "/assets/images/social-media/thumbnails/BAZNAS Santripreneur 2025 - Kluster Haji dan Umroh.png",
     youtubeId: "6ngUEPZVFZs",
     duration: "12:15",
   },
@@ -232,7 +232,7 @@ export const videoPortfolio: VideoPortfolioItem[] = [
       "Video profil institusi yang memperkenalkan visi, misi, program unggulan, serta kontribusi Kemendukbangga/BKKBN RI dalam pembangunan keluarga dan kependudukan di Indonesia.",
     category: "Event Profile",
     thumbnail:
-      "assets/images/social-media/thumbnails/Video Profil KemendukbanggaBKKBN RI.png",
+      "/assets/images/social-media/thumbnails/Video Profil KemendukbanggaBKKBN RI.png",
     youtubeId: "X66VfLXYV_4",
     duration: "4:20",
   },
@@ -243,7 +243,7 @@ export const videoPortfolio: VideoPortfolioItem[] = [
       "Video teaser yang mengajak generasi muda untuk berpartisipasi dalam forum Townhall Muda dengan tema energi berkelanjutan melalui diskusi, kolaborasi, dan inovasi.",
     category: "Event Profile",
     thumbnail:
-      "assets/images/social-media/thumbnails/Teaser Townhall Muda - Sustainable Energy.png",
+      "/assets/images/social-media/thumbnails/Teaser Townhall Muda - Sustainable Energy.png",
     youtubeId: "NOjF8rzmKU4",
     duration: "4:20",
   },
@@ -254,7 +254,7 @@ export const videoPortfolio: VideoPortfolioItem[] = [
       "Video profil yang menampilkan potensi pariwisata, budaya, serta peran Duta Wisata Kabupaten Cilacap dalam mempromosikan destinasi dan kearifan lokal.",
     category: "Event Profile",
     thumbnail:
-      "assets/images/social-media/thumbnails/Duta Wisata Kabupaten Cilacap.png",
+      "/assets/images/social-media/thumbnails/Duta Wisata Kabupaten Cilacap.png",
     youtubeId: "pLYLRlrwhBo",
     duration: "4:20",
   },
@@ -265,7 +265,7 @@ export const videoPortfolio: VideoPortfolioItem[] = [
       "Video inspiratif yang mengangkat kisah kebangkitan pelaku UMKM melalui inovasi, adaptasi digital, dan semangat kolaborasi dalam menghadapi tantangan pascapandemi.",
     category: "Event Profile",
     thumbnail:
-      "assets/images/social-media/thumbnails/UMKM Bangkit dari Pandemi.png",
+      "/assets/images/social-media/thumbnails/UMKM Bangkit dari Pandemi.png",
     youtubeId: "RKP7ZGxO9Vw",
     duration: "4:20",
   },

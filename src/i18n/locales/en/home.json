@@ -1,0 +1,179 @@
+{
+  "hero": {
+    "title": "Realize Your Best Potential with",
+    "titleHighlight": "APR Foundation",
+    "subtitle": "Create Your Force, Shape The Future!",
+    "ctaPrimary": "Explore Programs & Services",
+    "ctaSecondary": "Learn Our Story",
+    "scrollHint": "Scroll To Explore"
+  },
+  "about": {
+    "badge": "ABOUT US",
+    "title": "Building the Future Through Human Development",
+    "description1": "<strong>APR Foundation</strong> is a multi-stakeholder collaborative ecosystem for HR & Organization development, with direct experience handling government, corporate, and grassroots community programs in Indonesia. We are here to help create a better future",
+    "tagline": "Our Tagline:",
+    "taglineHighlight": "Create Your Force, Shape The Future!",
+    "description2": "With the spirit of discovering the potential within, APR is committed to developing the quality of human resources, fostering entrepreneurship, and providing the best creative services to shape a better future for Indonesia.",
+    "overlayTitle": "COLLABORATIVE ECOSYSTEM",
+    "overlayDescription": "Building Indonesia's Superior Human Resources that connects government, corporations, and communities to create sustainable impact."
+  },
+  "stats": {
+    "badge": "MEASURABLE IMPACT",
+    "title": "Measurable Impact in Numbers",
+    "subtitle": "We are proud of this journey and achievements, reflecting our commitment to Human Resources and Organization development.",
+    "items": {
+      "individu": {
+        "label": "Individuals",
+        "description": "Nurtured with core professional and leadership skills"
+      },
+      "organisasi": {
+        "label": "Organizations",
+        "description": "Have become our partners in achieving development goals"
+      },
+      "project": {
+        "label": "Projects",
+        "description": "Successfully completed with significant impact"
+      },
+      "years": {
+        "label": "Years of Experience",
+        "description": "In talent development, project management & creative agency"
+      }
+    }
+  },
+  "focusAreas": {
+    "badge": "CORE FOCUS AREAS",
+    "title": "APR Focus Areas: Key Fields of Change",
+    "subtitle": "APR has a strong commitment to creating positive change in various sectors crucial for Indonesia's future."
+  },
+  "visionMission": {
+    "badge": "OUR COMPASS",
+    "title": "Vision & Mission",
+    "subtitle": "The fundamental values that direct our actions, cohorts, partnerships, and scientific audits.",
+    "vision": {
+      "badge": "Our Vision",
+      "title": "To Become a Collaborative Ecosystem",
+      "description": "in developing quality, creative Human Resources & Organizations that have a positive impact on Indonesian society."
+    },
+    "mission": {
+      "badge": "Our Mission",
+      "title": "Our Mission",
+      "items": [
+        "Organize high-quality programs & creative processes.",
+        "Create an inclusive collaborative ecosystem.",
+        "Facilitate sustainable individual and organizational development."
+      ]
+    }
+  },
+  "manifesto": {
+    "badge": "OUR MANIFESTO",
+    "title": "Journey and Manifesto",
+    "subtitle": "Our Journey and Manifesto",
+    "quote": "APR was founded on the belief that every individual and organization has unlimited potential waiting to be unlocked.",
+    "journey": {
+      "title": "Our Journey",
+      "content": "Starting from various initiatives, from small communities, APR has grown and evolved into a professional entity that has handled various HR development programs and creative projects across Indonesia."
+    },
+    "spirit": {
+      "title": "Our Spirit",
+      "content": "We were born from the spirit of mutual cooperation to advance the quality of Indonesian humans through collaboration and continuous innovation."
+    },
+    "legal": {
+      "title": "Legal Foundation",
+      "content": "APR Foundation was established based on Foundation Establishment Deed No. 01 dated April 20, 2026, made before Notary Nailul Husna, S.H., M.Kn.; and Decree of the Minister of Law of the Republic of Indonesia Number AHU-0010217.AH.01.04. Year 2026 dated April 23, 2026 concerning Ratification of Legal Entity of Aprakarsa Cipta Strategika Nusantara Foundation."
+    }
+  },
+  "team": {
+    "badge": "CO-FOUNDERS & DIRECTORS",
+    "title": "The Visionary Board",
+    "subtitle": "Meet the educators, agriculturalists, and storytellers orchestrating our nationwide initiatives.",
+    "members": {
+      "aulia-pradipta": {
+        "name": "Aulia Pradipta",
+        "position": "Founder & Chief Executive Officer",
+        "description": "Leading APR's vision and strategy for sustainable impact."
+      },
+      "rosyad-al-ghani": {
+        "name": "M. Rosyad Al Ghani",
+        "position": "Advisor",
+        "description": "Providing insights on agripreneurship and food resilience development."
+      },
+      "fatkhurrokhim": {
+        "name": "Fatkhurrokhim",
+        "position": "Advisor",
+        "description": "Providing oversight and insights on the organization's strategic direction."
+      },
+      "safriko-desna": {
+        "name": "Safriko Desna Putra",
+        "position": "Advisor",
+        "description": "Providing insights on leadership, talent, and future workforce development programs."
+      },
+      "elfina-dewi": {
+        "name": "Elfina Dewi Roseningrum",
+        "position": "Foundation Secretary",
+        "description": "Leading and supporting administrative processes."
+      },
+      "dwi-rahmanwati": {
+        "name": "Dwi Rahmawati Utami",
+        "position": "Foundation Treasury",
+        "description": "Leading financial management and ensuring operational stability."
+      },
+      "abdul-malik": {
+        "name": "Abdul Malik Fajar",
+        "position": "Creative Lead",
+        "description": "Leading creative processes with innovative principles and dedicated work ethic."
+      },
+      "annisa-bulan": {
+        "name": "Annisa Bulan Dewi",
+        "position": "Talent Lead",
+        "description": "Leading leadership, talent, and future workforce development programs."
+      },
+      "audri-syahroni": {
+        "name": "Audri Syahroni",
+        "position": "Agripreneurship Lead",
+        "description": "Leading agripreneurship and food resilience development programs."
+      },
+      "marta-fibriantika": {
+        "name": "Marta Fibriantika",
+        "position": "Partnership Lead",
+        "description": "Building and maintaining sustainable partnerships with strategic partners."
+      },
+      "dwi-maya": {
+        "name": "Dwi Maya Wijayanti",
+        "position": "Finance Lead",
+        "description": "Managing finances and ensuring operational stability."
+      },
+      "jainal-abidin": {
+        "name": "Muhammad Jainal Abidin",
+        "position": "Project Officer",
+        "description": "Supporting program operations and ensuring deliverables are achieved."
+      }
+    }
+  },
+
+  "whyChoose": {
+    "badge": "WHY CHOOSE APR",
+    "title": "Why Choose APR?",
+    "subtitle": "With a collaborative approach and creative work processes, we help individuals and organizations achieve their best potential. We are committed to providing real added value",
+    "items": {
+      "expert-led": {
+        "title": "Focus on Quality",
+        "description": "Every program is designed and implemented with the highest national standards, ensuring optimal and impactful results."
+      },
+      "awareness": {
+        "title": "Care for Development",
+        "description": "We understand that every individual and organization has unique potential. Our priority is to help you identify and develop it"
+      },
+      "innovation": {
+        "title": "Sustainable Innovation",
+        "description": "We continuously present fresh, relevant, and effective learning methods, adapting to the dynamics of market needs and technology."
+      },
+      "impact-measured": {
+        "title": "Measurable Results",
+        "description": "We are committed to providing real, measurable impact, supporting individual growth and the sustainability of your organization."
+      }
+    }
+  },
+  "partners": {
+    "title": "STRENGTHENED BY TRUSTED INSTITUTIONS"
+  }
+}

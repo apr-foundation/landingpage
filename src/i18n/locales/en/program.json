@@ -1,0 +1,103 @@
+{
+  "hero": {
+    "breadcrumbHome": "Home",
+    "breadcrumbProgram": "Programs & Services",
+    "title": "Our Programs & Services",
+    "subtitle": "Transforming corporate, government, and agricultural ecosystems through high-quality workshops designed selectively, practice-oriented, and providing official credentials."
+  },
+  "programs": {
+    "badge": "ACTIVE COHORTS",
+    "title": "Programs & Services",
+    "subtitle": "APR offers a range of programs and creative services designed to holistically develop the quality of Human Resources and Organizations.",
+    "keyOutcomes": "Key Outcomes & Deliverables",
+    "items": {
+      "program-management-service": {
+        "title": "Program Management",
+        "description": "Advisory services to ensure every program runs structurally, on-target, and achieves established goals. We assist from the planning stage, implementation management, to evaluation with an adaptive and measurable approach.",
+        "category": "Program Management",
+        "benefits": [
+          "Comprehensive and measurable program planning",
+          "Timeline management using Agile approach",
+          "Effective and efficient resource management",
+          "Program monitoring, evaluation, and reporting"
+        ]
+      },
+      "intensive-bootcamp": {
+        "title": "Intensive Bootcamp",
+        "description": "Intensive training programs designed to enhance participant competencies through practice-based curriculum, case studies, and direct mentoring by professional mentors according to industry needs.",
+        "category": "Training",
+        "benefits": [
+          "Comprehensive training for specific skill development",
+          "Structured curriculum with hands-on practice approach",
+          "Mentoring by experienced professionals in their fields",
+          "Case studies and real projects according to industry needs"
+        ]
+      },
+      "leadership-mentorship-program": {
+        "title": "Leadership & Mentorship Program",
+        "description": "Leadership development program focused on enhancing individual capacity through personal mentoring, soft skills strengthening, and career planning to create impactful leaders.",
+        "category": "Leadership",
+        "benefits": [
+          "Personal leadership and professional growth development",
+          "Exclusive 1-on-1 mentoring with professional practitioners",
+          "Career guidance for clear career path planning",
+          "Soft skills, communication, and decision-making skills development"
+        ]
+      },
+      "creative-agency-service": {
+        "title": "Creative Agency Services",
+        "description": "End-to-end creative services that help organizations, institutions, and companies build brand identity, produce quality content, and expand communication reach through effective creative strategies.",
+        "category": "Creative Agency",
+        "benefits": [
+          "Brand strategy, visual identity design, and multimedia content production",
+          "Collaboration with creative teams and industry experts",
+          "Creation of promotional materials for various digital platforms",
+          "Opportunities for content publication and distribution through various media"
+        ]
+      }
+    }
+  },
+  "process": {
+    "badge": "METRIC METHODOLOGY",
+    "title": "How Do We Work? The IDEA Approach",
+    "subtitle": "APR implements the systematic IDEA approach (Insight, Direction, Execution, Assessment) to ensure every project runs effectively and efficiently.",
+    "steps": {
+      "I": {
+        "title": "Intake & Insights",
+        "description": "Understanding client's unique needs through in-depth analysis and interactive discussions.",
+        "details": [
+          "Consultation sessions to understand program needs and objectives.",
+          "Analysis of conditions, challenges, and potential of organizations or participants.",
+          "Identification of priorities and scope of required services."
+        ]
+      },
+      "D": {
+        "title": "Direction",
+        "description": "Developing strategic and structured plans aligned with the goals to be achieved.",
+        "details": [
+          "Strategy development and program implementation roadmap.",
+          "Determination of targets, success indicators, and work timeline.",
+          "Selection of the most appropriate methods, mentors, and resources."
+        ]
+      },
+      "E": {
+        "title": "Execution",
+        "description": "Implementing programs and services interactively and dynamically.",
+        "details": [
+          "Implementation of programs, training, or mentoring according to plan.",
+          "Active collaboration with mentors, facilitators, and all stakeholders.",
+          "Regular progress monitoring to ensure targets are achieved."
+        ]
+      },
+      "A": {
+        "title": "Assessment",
+        "description": "Evaluating impact and providing comprehensive reports for continuous improvement.",
+        "details": [
+          "Results evaluation based on predetermined indicators.",
+          "Preparation of reports and program implementation documentation.",
+          "Development recommendations and sustainable follow-up strategies."
+        ]
+      }
+    }
+  }
+}

@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Play, ChevronRight, X } from "lucide-react";
@@ -11,9 +13,23 @@ import { useTab } from "@/context/TabContext";
 import Link from "next/link";
 import ProgramSection from "./ProgramSection";
 
-export default function PortfolioView() {
-  const { setActiveTab } = useTab();
+interface PortfolioViewProps {
+  setActiveTab: (tab: string) => void;
+  t: any; // Translation object
+}
+
+export default function PortfolioView({ setActiveTab, t }: PortfolioViewProps) {
+  const { setActiveTab: setTab } = useTab();
   const [activeVideoId, setActiveVideoId] = useState<string | null>(null);
+
+  // Helper untuk mendapatkan terjemahan video
+  const getTranslatedVideo = (video: any) => {
+    const translated = t.videos?.items?.[video.id];
+    return {
+      title: translated?.title || video.title,
+      description: translated?.description || video.description,
+    };
+  };
 
   return (
     <div id="portfolio-view" className="relative w-full pt-20">
@@ -32,13 +48,15 @@ export default function PortfolioView() {
           <nav className="flex items-center space-x-2 text-xs md:text-sm font-medium font-sans text-gray-400 mb-4 select-none">
             <Link
               href={"/"}
-              onClick={() => setActiveTab("home")}
+              onClick={() => setTab("home")}
               className="hover:text-primary-teal transition-colors cursor-pointer"
             >
-              Beranda
+              {t.hero?.breadcrumbHome || "Beranda"}
             </Link>
             <ChevronRight className="w-3.5 h-3.5" />
-            <span className="text-white">Portofolio</span>
+            <span className="text-white">
+              {t.hero?.breadcrumbPortfolio || "Portofolio"}
+            </span>
           </nav>
 
           <motion.h1
@@ -47,7 +65,7 @@ export default function PortfolioView() {
             transition={{ duration: 0.6 }}
             className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white font-sans leading-none"
           >
-            Projek dan Portofolio Kami
+            {t.hero?.title || "Projek dan Portofolio Kami"}
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -55,96 +73,90 @@ export default function PortfolioView() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="mt-4 text-base sm:text-lg text-gray-300 max-w-2xl"
           >
-            Dokumentasi berbagai proyek, program, dan kolaborasi yang telah kami
-            realisasikan sebagai wujud komitmen dalam menciptakan dampak nyata
-            melalui pengembangan talenta, manajemen program, kepemimpinan, dan
-            solusi kreatif.
+            {t.hero?.subtitle ||
+              "Dokumentasi berbagai proyek, program, dan kolaborasi yang telah kami realisasikan sebagai wujud komitmen dalam menciptakan dampak nyata melalui pengembangan talenta, manajemen program, kepemimpinan, dan solusi kreatif."}
           </motion.p>
         </div>
       </section>
 
       {/* SECTION 2: INDONESIA LEADERSHIP PROJECT */}
-      <ProgramSection data={leadershipData} variant="leadership" />
+      <ProgramSection data={leadershipData} variant="leadership" t={t} />
 
       {/* SECTION 3: REGENERATIVE AGRICULTURE */}
-      <ProgramSection data={agricultureData} variant="agriculture" />
+      <ProgramSection data={agricultureData} variant="agriculture" t={t} />
 
       {/* SECTION 4: CREATIVE MANAGEMENT */}
-      <ProgramSection data={creativeData} variant="creative" />
+      <ProgramSection data={creativeData} variant="creative" t={t} />
 
       {/* SECTION 5: VIDEO CARDS (COMPANY PROFILE & TVC) */}
       <section className="py-24 bg-gray-950 text-gray-300 relative overflow-hidden">
-        {/* Soft decorative background glows */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-primary-teal/10 rounded-full blur-[130px] pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16 flex flex-col items-center">
             <span className="inline-flex items-center px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-white/5 text-gray-300 mb-4 border border-white/10 shadow-sm">
-              APR CINEMATICS
+              {t.videos?.badge || "APR CINEMATICS"}
             </span>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight leading-snug">
-              Featured TVC & Film Profiles
+              {t.videos?.title || "Featured TVC & Film Profiles"}
             </h2>
             <p className="mt-3.5 text-sm sm:text-base text-gray-400">
-              Watch our custom documentaries and official graduation summaries
-              detailing South Jakarta and West Java programs. Click play to
-              watch.
+              {t.videos?.subtitle ||
+                "Watch our custom documentaries and official graduation summaries detailing South Jakarta and West Java programs. Click play to watch."}
             </p>
           </div>
 
-          {/* Grid Layout of video cards */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {videoPortfolio.map((vid, idx) => (
-              <motion.div
-                key={vid.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: idx * 0.1 }}
-                className="group bg-gray-900/80 backdrop-blur-md border border-gray-800/80 rounded-[2rem] overflow-hidden flex flex-col justify-between text-left shadow-lg bento-item hover:border-primary-teal/30"
-              >
-                {/* Thumbnail Block with Play button hover effect */}
-                <div
-                  className="relative aspect-video bg-gray-950 cursor-pointer overflow-hidden"
-                  onClick={() => setActiveVideoId(vid.youtubeId)}
+            {videoPortfolio.map((vid, idx) => {
+              const translated = getTranslatedVideo(vid);
+              return (
+                <motion.div
+                  key={vid.id}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: idx * 0.1 }}
+                  className="group bg-gray-900/80 backdrop-blur-md border border-gray-800/80 rounded-[2rem] overflow-hidden flex flex-col justify-between text-left shadow-lg bento-item hover:border-primary-teal/30"
                 >
-                  <img
-                    src={vid.thumbnail}
-                    alt={vid.title}
-                    className="w-full h-full object-cover opacity-80 group-hover:scale-104 group-hover:opacity-90 transition-all duration-500"
-                  />
-                  {/* Play Button Overlay */}
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <motion.div
-                      whileHover={{ scale: 1.12 }}
-                      className="w-14 h-14 rounded-full bg-white text-gray-900 flex items-center justify-center shadow-lg transition-transform"
-                    >
-                      <Play className="w-6 h-6 fill-gray-900 ml-1" />
-                    </motion.div>
-                  </div>
-
-                  {/* Duration and category tags */}
-                  <div className="absolute bottom-3 left-3 py-1 px-2.5 rounded-md text-[10px] font-mono font-bold bg-gray-950/85 text-white">
-                    {vid.category}
-                  </div>
-                  {vid.duration && (
-                    <div className="absolute bottom-3 right-3 py-1 px-2.5 rounded-md text-[10px] font-mono font-bold bg-gray-950/85 text-white">
-                      {vid.duration}
+                  <div
+                    className="relative aspect-video bg-gray-950 cursor-pointer overflow-hidden"
+                    onClick={() => setActiveVideoId(vid.youtubeId)}
+                  >
+                    <img
+                      src={vid.thumbnail}
+                      alt={translated.title}
+                      className="w-full h-full object-cover opacity-80 group-hover:scale-104 group-hover:opacity-90 transition-all duration-500"
+                    />
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <motion.div
+                        whileHover={{ scale: 1.12 }}
+                        className="w-14 h-14 rounded-full bg-white text-gray-900 flex items-center justify-center shadow-lg transition-transform"
+                      >
+                        <Play className="w-6 h-6 fill-gray-900 ml-1" />
+                      </motion.div>
                     </div>
-                  )}
-                </div>
 
-                {/* Info Text */}
-                <div className="p-6">
-                  <h4 className="font-extrabold text-white text-base sm:text-lg mb-2 leading-snug group-hover:text-primary-teal transition-colors">
-                    {vid.title}
-                  </h4>
-                  <p className="text-xs text-gray-400 leading-relaxed font-sans">
-                    {vid.description}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
+                    <div className="absolute bottom-3 left-3 py-1 px-2.5 rounded-md text-[10px] font-mono font-bold bg-gray-950/85 text-white">
+                      {vid.category}
+                    </div>
+                    {vid.duration && (
+                      <div className="absolute bottom-3 right-3 py-1 px-2.5 rounded-md text-[10px] font-mono font-bold bg-gray-950/85 text-white">
+                        {vid.duration}
+                      </div>
+                    )}
+                  </div>
+
+                  <div className="p-6">
+                    <h4 className="font-extrabold text-white text-base sm:text-lg mb-2 leading-snug group-hover:text-primary-teal transition-colors">
+                      {translated.title}
+                    </h4>
+                    <p className="text-xs text-gray-400 leading-relaxed font-sans">
+                      {translated.description}
+                    </p>
+                  </div>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -159,7 +171,6 @@ export default function PortfolioView() {
             className="fixed inset-0 z-50 bg-gray-950/95 flex items-center justify-center p-4 sm:p-6 md:p-8"
             onClick={() => setActiveVideoId(null)}
           >
-            {/* Close Button top-right */}
             <button
               onClick={() => setActiveVideoId(null)}
               className="absolute top-6 right-6 p-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors cursor-pointer focus:outline-none"
@@ -168,7 +179,6 @@ export default function PortfolioView() {
               <X className="w-6 h-6" />
             </button>
 
-            {/* Video Frame */}
             <motion.div
               initial={{ scale: 0.95 }}
               animate={{ scale: 1 }}

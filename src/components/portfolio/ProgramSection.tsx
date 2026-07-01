@@ -2,8 +2,62 @@ import { motion } from "framer-motion";
 import { Calendar, Sprout } from "lucide-react";
 import Image from "next/image";
 
-const ProgramSection = ({ data = {}, variant = "leadership" }: any) => {
+interface ProgramSectionProps {
+  data?: any;
+  variant?: "leadership" | "agriculture" | "creative";
+  t?: any; // Translation object
+}
+
+const ProgramSection = ({
+  data = {},
+  variant = "leadership",
+  t,
+}: ProgramSectionProps) => {
   const { icon, title, badge, description, tags, pillars, portfolio } = data;
+
+  // Helper untuk mendapatkan terjemahan
+  const getTranslated = () => {
+    if (!t) return null;
+
+    const sectionKey = variant;
+    const translatedSection = t.sections?.[sectionKey];
+    return {
+      title: translatedSection?.title || title,
+      description: translatedSection?.description || description,
+      badge: translatedSection?.badge || badge,
+      tags: translatedSection?.tags || tags,
+      pillars: pillars?.map((pillar: any) => {
+        const pillarKey = pillar.title.toLowerCase().replace(/\s+/g, "-");
+        const translated = translatedSection?.pillars?.[pillarKey];
+        return {
+          ...pillar,
+          title: translated?.title || pillar.title,
+          description: translated?.description || pillar.description,
+        };
+      }),
+      portfolio: portfolio?.map((item: any) => {
+        const translated = translatedSection?.portfolio?.[item.id];
+        return {
+          ...item,
+          title: translated?.title || item.title,
+          subtitle: translated?.subtitle || item.subtitle,
+          category: translated?.category || item.category,
+          description: translated?.description || item.description || "",
+        };
+      }),
+    };
+  };
+
+  const translatedData = getTranslated() || data;
+
+  console.log(translatedData);
+  const {
+    title: translatedTitle,
+    description: translatedDescription,
+    tags: translatedTags,
+    pillars: translatedPillars,
+    portfolio: translatedPortfolio,
+  } = translatedData;
 
   // Variant-specific styling
   const getVariantStyles = () => {
@@ -51,11 +105,10 @@ const ProgramSection = ({ data = {}, variant = "leadership" }: any) => {
   const isCreative = variant === "creative";
 
   // Fungsi untuk menentukan apakah portofolio menggunakan gaya agriculture atau creative
-  // Di sini kita menukar: agriculture -> creative, creative -> agriculture
   const getPortfolioStyle = () => {
-    if (isAgriculture) return "creative"; // Agriculture menggunakan gaya creative
-    if (isCreative) return "agriculture"; // Creative menggunakan gaya agriculture
-    return "default"; // Leadership tetap default
+    if (isAgriculture) return "creative";
+    if (isCreative) return "agriculture";
+    return "default";
   };
 
   const portfolioStyle = getPortfolioStyle();
@@ -65,18 +118,18 @@ const ProgramSection = ({ data = {}, variant = "leadership" }: any) => {
   // Menentukan grid columns berdasarkan variant
   const getGridColumns = () => {
     if (isCreative) {
-      return "grid-cols-2 sm:grid-cols-3 lg:grid-cols-4"; // 4 kolom di desktop
+      return "grid-cols-2 sm:grid-cols-3 lg:grid-cols-4";
     }
-    return "grid-cols-1 md:grid-cols-2 lg:grid-cols-3"; // default 3 kolom
+    return "grid-cols-1 md:grid-cols-2 lg:grid-cols-3";
   };
 
   // Menentukan aspect ratio untuk agriculture style (creative variant)
   const getAspectRatio = () => {
     if (isCreative && useAgricultureStyle) {
-      return "aspect-[9/16]"; // Portrait untuk screenshot HP
+      return "aspect-[9/16]";
     }
     if (useAgricultureStyle) {
-      return "aspect-[4/3]"; // Default untuk agriculture
+      return "aspect-[4/3]";
     }
     return "";
   };
@@ -93,22 +146,22 @@ const ProgramSection = ({ data = {}, variant = "leadership" }: any) => {
           <div className="text-left max-w-2xl ">
             <Image
               src={icon}
-              alt={title}
+              alt={translatedTitle}
               width={60}
               height={60}
               className="mb-4"
             />
             <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-950 tracking-tight font-sans mb-3">
-              {title}
+              {translatedTitle}
             </h2>
             <p className="text-sm sm:text-base text-gray-500 font-sans leading-relaxed">
-              {description}
+              {translatedDescription}
             </p>
           </div>
 
           {/* Tags */}
           <div className="flex flex-wrap items-center gap-2 mt-4 md:mt-0">
-            {tags.map((tag: any) => (
+            {translatedTags?.map((tag: any) => (
               <span
                 key={tag}
                 className={`px-3.5 py-1.5 rounded-full text-xs font-semibold ${styles.tagBg} ${styles.tagText} border border-gray-150/40`}
@@ -125,7 +178,7 @@ const ProgramSection = ({ data = {}, variant = "leadership" }: any) => {
             isCreative ? "lg:grid-cols-2" : "lg:grid-cols-3"
           }  gap-6 mb-14`}
         >
-          {pillars.map((pillar: any, idx: number) => (
+          {translatedPillars?.map((pillar: any, idx: number) => (
             <motion.div
               key={pillar.id}
               initial={{ opacity: 0, y: 20 }}
@@ -157,13 +210,14 @@ const ProgramSection = ({ data = {}, variant = "leadership" }: any) => {
         <div>
           {isCreative && (
             <h2 className="text-3xl sm:text-4xl font-extrabold gradient-text-primary tracking-tight font-sans mb-12">
-              Portfolio Social Media Management
+              {t?.sections?.creative?.portfolioTitle ||
+                "Portfolio Social Media Management"}
             </h2>
           )}
           <div
             className={`grid ${getGridColumns()} gap-4 md:gap-6 lg:gap-8 justify-items-center`}
           >
-            {portfolio.map((item: any, idx: number) => (
+            {translatedPortfolio?.map((item: any, idx: number) => (
               <motion.div
                 key={item.id}
                 initial={{ opacity: 0, y: 30 }}
@@ -180,7 +234,7 @@ const ProgramSection = ({ data = {}, variant = "leadership" }: any) => {
                 }`}
               >
                 {useAgricultureStyle ? (
-                  // Gaya Agriculture (sebelumnya untuk agriculture, sekarang digunakan untuk creative)
+                  // Gaya Agriculture
                   <>
                     <div className="relative w-full h-full">
                       <img
@@ -203,7 +257,7 @@ const ProgramSection = ({ data = {}, variant = "leadership" }: any) => {
                     </div>
                   </>
                 ) : (
-                  // Gaya Card (sebelumnya untuk leadership & creative, sekarang untuk agriculture)
+                  // Gaya Card
                   <>
                     <div className="overflow-hidden aspect-video relative bg-gray-100">
                       <img
@@ -227,7 +281,10 @@ const ProgramSection = ({ data = {}, variant = "leadership" }: any) => {
                       {!useCreativeStyle && (
                         <div className="flex items-center space-x-2 text-xs text-gray-400 font-mono mb-2">
                           <Calendar className="w-3.5 h-3.5 text-primary-teal" />
-                          <span>Year: {item.year}</span>
+                          <span>
+                            {t?.sections?.[variant]?.yearLabel || "Year"}:{" "}
+                            {item.year}
+                          </span>
                         </div>
                       )}
                       <h3

@@ -1,0 +1,157 @@
+{
+  "hero": {
+    "breadcrumbHome": "Home",
+    "breadcrumbPortfolio": "Portfolio",
+    "title": "Our Projects & Portfolio",
+    "subtitle": "Documentation of various projects, programs, and collaborations we have realized as a manifestation of our commitment to creating real impact through talent development, program management, leadership, and creative solutions."
+  },
+  "sections": {
+    "leadership": {
+      "badge": "Indonesia Leadership Project",
+      "title": "INDONESIA LEADERSHIP PROJECT",
+      "yearLabel": "Year",
+      "description": "Indonesia Leadership Project is a comprehensive talent development program designed by APR Foundation to produce future Indonesian leaders with global competitiveness. This program focuses on three main pillars.",
+      "pillars": {
+        "leadership": {
+          "title": "Leadership",
+          "description": "Building strong leadership capacity through training, mentoring, and real field experience, preparing participants to lead in various sectors."
+        },
+        "talent": {
+          "title": "Talent",
+          "description": "Identifying and developing Indonesia's best talents, providing space for individuals to explore their potential and hone skills relevant to current needs."
+        },
+        "future-workforce": {
+          "title": "Future Workforce",
+          "description": "Preparing the next generation to adapt and contribute optimally amid changing work environments."
+        }
+      },
+      "portfolio": {
+        "government-leadership-training": {
+          "title": "Government Leadership Training",
+          "subtitle": "Equipping 120 civil servants in South Jakarta with ethical decision-making skills, digital governance, and crisis communication.",
+          "category": "Leadership",
+          "description": "Leadership development program designed to enhance government officials' capacity through learning about integrity leadership, digital governance, strategic communication, and effective decision-making."
+        },
+        "baznas-santripreneur": {
+          "title": "Baznas Santripreneur",
+          "subtitle": "Empowerment program for Islamic boarding school students through entrepreneurship training, leadership development, and mentoring in building sustainable businesses.",
+          "category": "Talent",
+          "description": "Talent development initiative with BAZNAS aimed at equipping students with entrepreneurial skills, leadership mindsets, and practical experience to create sustainable economic and social impact."
+        },
+        "townhall-muda": {
+          "title": "Townhall Muda",
+          "subtitle": "Interactive dialogue forum bringing together youth, leaders, and various stakeholders to discuss leadership, innovation, and community development issues.",
+          "category": "Community",
+          "description": "Discussion and collaboration activities that encourage active youth participation in exchanging ideas, building networks, and creating innovative solutions for social challenges and national development."
+        }
+      }
+    },
+    "agriculture": {
+      "badge": "Mudatani",
+      "title": "REGENERATIVE AGRICULTURE",
+      "yearLabel": "Year",
+      "description": "Mudatani is a regenerative agriculture program initiated by APR Foundation to drive transformation in Indonesia's agricultural sector through two main pillars:",
+      "pillars": {
+        "agripreneurship": {
+          "title": "Agripreneurship",
+          "description": "Fostering entrepreneurial spirit in agriculture among Indonesian youth, equipping them with modern agribusiness skills, agricultural technology innovation, and the ability to manage sustainable and profitable farming enterprises."
+        },
+        "food-resilience": {
+          "title": "Food Resilience",
+          "description": "Building national food security through regenerative agricultural practices that maintain soil fertility, reduce dependence on chemicals, and ensure healthy, stable, and environmentally friendly food production for future generations."
+        },
+        "sustainable-agriculture": {
+          "title": "Sustainable Agriculture",
+          "description": "Promoting the implementation of sustainable agricultural systems through technology utilization, wise natural resource management, and environmentally friendly cultivation practices to increase productivity and farmer welfare."
+        }
+      },
+      "portfolio": {
+        "agri-biochar-2024": {
+          "title": "Routine Maintenance",
+          "subtitle": "Carrying out regular plant maintenance through watering, fertilizing, pest control, and growth monitoring to maintain land productivity.",
+          "category": "Agripreneurship"
+        },
+        "agri-urban-farms": {
+          "title": "Harvest Festival",
+          "subtitle": "Joint harvest momentum showcasing quality agricultural cultivation results while strengthening collaboration between farmers, communities, and partners.",
+          "category": "Food Resilience"
+        },
+        "agri-organic-cocoa": {
+          "title": "Agricultural Marketing",
+          "subtitle": "Supporting farmers in expanding market access through marketing strategies, product value addition, and partnerships with various sectors.",
+          "category": "Agripreneurship"
+        }
+      }
+    },
+    "creative": {
+      "badge": "Creafo",
+      "title": "CREATIVE MANAGEMENT",
+      "yearLabel": "Year",
+      "portfolioTitle": "Social Media Management Portfolio",
+      "description": "Creafo is a creative management program from APR Foundation designed to nurture and empower Indonesian creative talents ready to compete in the digital economy era. This program is built on two main pillars:",
+      "pillars": {
+        "creative": {
+          "title": "Creative",
+          "description": "Developing each talent's creative abilities across various creative industry fields, from digital content, design, media production, to storytelling. Each talent is trained to think innovatively, express ideas professionally, and create impactful works."
+        },
+        "digital-economy": {
+          "title": "Digital Economy",
+          "description": "Equipping each talent with a deep understanding of the digital economy ecosystem, including digital marketing strategies, content monetization, platform-based creative business development, and evolving industry trends."
+        }
+      },
+      "portfolio": {
+        "creative-marta-agri": {
+          "title": "ID Next Leader",
+          "subtitle": "Social media content highlighting the leadership spirit of the younger generation through education, inspiration, and character development to create future Indonesian leaders.",
+          "category": "Social Media"
+        },
+        "creative-jakarta-green": {
+          "title": "Dedikasi Untuk Negeri",
+          "subtitle": "Digital publication featuring stories of dedication, contribution, and inspiration from individuals and communities making positive impacts on society and the nation.",
+          "category": "Social Media"
+        },
+        "creative-craftsmen-indonesia": {
+          "title": "Beasiswa 10000",
+          "subtitle": "Informative content about scholarship programs aimed at expanding access to education, providing registration information, and encouraging more young people to seize learning opportunities.",
+          "category": "Social Media"
+        },
+        "creative-craftsmen-indonesia-test": {
+          "title": "Rumah Tempe Indonesia",
+          "subtitle": "Promotional and educational content introducing tempe product innovations, production processes, and community empowerment through local food industry development.",
+          "category": "Social Media"
+        }
+      }
+    }
+  },
+  "videos": {
+    "badge": "APR CINEMATICS",
+    "title": "Featured TVC & Film Profiles",
+    "subtitle": "Watch our custom documentaries and official graduation summaries detailing South Jakarta and West Java programs. Click play to watch.",
+    "items": {
+      "vid-manifesto-25": {
+        "title": "Waste to Energy - Danantara Indonesia",
+        "description": "Corporate video showcasing sustainable waste-to-energy solutions through technological innovation, collaboration, and commitment to environmentally friendly development."
+      },
+      "vid-agri-doc": {
+        "title": "BAZNAS Santripreneur 2025 - Haji & Umrah Cluster",
+        "description": "Documentary video of the Santripreneur program highlighting entrepreneurship development for students in the Haji and Umrah cluster through training, mentoring, and collaboration with BAZNAS."
+      },
+      "vid-leadership-keynote": {
+        "title": "Kemendukbangga/BKKBN RI Profile Video",
+        "description": "Institutional profile video introducing the vision, mission, flagship programs, and contributions of Kemendukbangga/BKKBN RI in family and population development in Indonesia."
+      },
+      "vid-leadership-keynote2": {
+        "title": "Townhall Muda Teaser - Sustainable Energy",
+        "description": "Teaser video inviting young people to participate in the Townhall Muda forum with the theme of sustainable energy through discussion, collaboration, and innovation."
+      },
+      "vid-leadership-keynote3": {
+        "title": "Cilacap Tourism Ambassador",
+        "description": "Profile video showcasing tourism potential, culture, and the role of Cilacap Tourism Ambassadors in promoting destinations and local wisdom."
+      },
+      "vid-leadership-keynote4": {
+        "title": "MSMEs Rising from Pandemic",
+        "description": "Inspirational video highlighting the revival stories of MSMEs through innovation, digital adaptation, and collaborative spirit in facing post-pandemic challenges."
+      }
+    }
+  }
+}

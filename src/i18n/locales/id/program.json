@@ -1,0 +1,103 @@
+{
+  "hero": {
+    "breadcrumbHome": "Beranda",
+    "breadcrumbProgram": "Program dan Layanan",
+    "title": "Program dan Layanan Kami",
+    "subtitle": "Mengubah ekosistem korporasi, pemerintahan, dan pertanian melalui workshop berkualitas tinggi yang dirancang secara selektif, berorientasi praktik, dan memberikan kredensial resmi."
+  },
+  "programs": {
+    "badge": "PROGRAM AKTIF",
+    "title": "Program dan Layanan",
+    "subtitle": "APR menawarkan serangkaian program dan layanan kreatif yang dirancang untuk mengembangkan kualitas Sumber Daya Manusia serta Organisasi secara holistik.",
+    "keyOutcomes": "Hasil & Manfaat Utama",
+    "items": {
+      "program-management-service": {
+        "title": "Manajemen Program",
+        "description": "Layanan pendampingan untuk memastikan setiap program berjalan secara terstruktur, tepat sasaran, dan mencapai target yang telah ditetapkan. Kami membantu mulai dari tahap perencanaan, pengelolaan pelaksanaan, hingga evaluasi dengan pendekatan yang adaptif dan terukur.",
+        "category": "Manajemen Program",
+        "benefits": [
+          "Perencanaan program secara komprehensif dan terukur",
+          "Manajemen timeline menggunakan pendekatan Agile",
+          "Pengelolaan sumber daya yang efektif dan efisien",
+          "Monitoring, evaluasi, dan pelaporan perkembangan program"
+        ]
+      },
+      "intensive-bootcamp": {
+        "title": "Bootcamp Intensif",
+        "description": "Program pelatihan intensif yang dirancang untuk meningkatkan kompetensi peserta melalui kurikulum berbasis praktik, studi kasus, dan pendampingan langsung oleh mentor profesional sesuai dengan kebutuhan industri.",
+        "category": "Pelatihan",
+        "benefits": [
+          "Pelatihan komprehensif untuk pengembangan keterampilan spesifik",
+          "Kurikulum terstruktur dengan pendekatan praktik langsung",
+          "Pendampingan oleh mentor berpengalaman di bidangnya",
+          "Studi kasus dan proyek nyata sesuai kebutuhan industri"
+        ]
+      },
+      "leadership-mentorship-program": {
+        "title": "Leadership & Mentorship Program",
+        "description": "Program pengembangan kepemimpinan yang berfokus pada peningkatan kapasitas individu melalui mentoring personal, penguatan soft skills, serta perencanaan karier untuk menciptakan pemimpin yang berdampak.",
+        "category": "Kepemimpinan",
+        "benefits": [
+          "Pengembangan leadership dan professional growth secara personal",
+          "Mentoring eksklusif 1-on-1 bersama praktisi profesional",
+          "Career guidance untuk perencanaan jalur karier yang jelas",
+          "Pengembangan soft skills, komunikasi, dan kemampuan pengambilan keputusan"
+        ]
+      },
+      "creative-agency-service": {
+        "title": "Layanan Agensi Kreatif",
+        "description": "Layanan kreatif end-to-end yang membantu organisasi, institusi, maupun perusahaan membangun identitas merek, menghasilkan konten berkualitas, dan memperluas jangkauan komunikasi melalui strategi kreatif yang efektif.",
+        "category": "Agensi Kreatif",
+        "benefits": [
+          "Strategi merek, desain identitas visual, dan produksi konten multimedia",
+          "Kolaborasi dengan tim kreatif dan pakar industri",
+          "Pembuatan materi promosi untuk berbagai platform digital",
+          "Peluang publikasi dan distribusi konten melalui berbagai media"
+        ]
+      }
+    }
+  },
+  "process": {
+    "badge": "METODOLOGI METRIK",
+    "title": "Bagaimana Proses Kerja Kami? Pendekatan IDEA",
+    "subtitle": "APR mengimplementasikan pendekatan sistematis IDEA (Insight, Direction, Execution, Assessment) untuk memastikan setiap proyek berjalan efektif dan efisien.",
+    "steps": {
+      "I": {
+        "title": "Intake & Insights",
+        "description": "Memahami kebutuhan unik klien melalui analisis mendalam dan diskusi interaktif.",
+        "details": [
+          "Sesi konsultasi untuk memahami kebutuhan dan tujuan program.",
+          "Analisis kondisi, tantangan, dan potensi organisasi atau peserta.",
+          "Identifikasi prioritas serta ruang lingkup layanan yang dibutuhkan."
+        ]
+      },
+      "D": {
+        "title": "Direction",
+        "description": "Menyusun rencana strategis dan terstruktur yang selaras dengan tujuan yang ingin dicapai.",
+        "details": [
+          "Penyusunan strategi dan roadmap pelaksanaan program.",
+          "Penentuan target, indikator keberhasilan, dan timeline kerja.",
+          "Pemilihan metode, mentor, dan sumber daya yang paling sesuai."
+        ]
+      },
+      "E": {
+        "title": "Execution",
+        "description": "Melakukan implementasi program dan layanan secara interaktif dan dinamis.",
+        "details": [
+          "Pelaksanaan program, pelatihan, atau pendampingan sesuai rencana.",
+          "Kolaborasi aktif bersama mentor, fasilitator, dan seluruh pemangku kepentingan.",
+          "Monitoring progres secara berkala untuk memastikan target tercapai."
+        ]
+      },
+      "A": {
+        "title": "Assessment",
+        "description": "Evaluasi dampak dan memberikan laporan komprehensif untuk perbaikan berkelanjutan.",
+        "details": [
+          "Evaluasi hasil berdasarkan indikator yang telah ditetapkan.",
+          "Penyusunan laporan dan dokumentasi pelaksanaan program.",
+          "Rekomendasi pengembangan dan strategi tindak lanjut yang berkelanjutan."
+        ]
+      }
+    }
+  }
+}

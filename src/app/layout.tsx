@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { TabProvider } from "@/context/TabContext";
-import ClientLayout from "@/components/shared/ClientLayout";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -66,18 +64,15 @@ export const metadata: Metadata = {
     images: ["/assets/images/og-image.png"],
   },
 };
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <html lang="id" className={inter.variable}>
-      <body className="relative min-h-screen flex flex-col justify-between bg-white text-gray-800 font-sans selection:bg-primary-teal/20 selection:text-primary-blue antialiased">
-        <TabProvider>
-          <ClientLayout>{children}</ClientLayout>
-        </TabProvider>
-      </body>
+    <html lang="id">
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }

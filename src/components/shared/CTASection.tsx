@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import {
   Mail,
   Globe,
@@ -10,8 +9,36 @@ import {
 } from "lucide-react";
 import Button from "./Button";
 import GlassCard from "./GlassCard";
+import { useLanguage } from "@/context/LanguageContext";
+import { useTranslation } from "@/hooks/useTranslation";
 
 export default function CTASection() {
+  const { locale } = useLanguage();
+  const { t, loading } = useTranslation(locale, "cta");
+
+  if (loading) {
+    return (
+      <section className="py-24 bg-white relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="p-8 sm:p-12 md:p-16 rounded-3xl bg-gray-100 animate-pulse">
+            <div className="h-8 w-48 mx-auto rounded bg-gray-200 mb-6"></div>
+            <div className="h-12 w-96 mx-auto rounded bg-gray-200 mb-4"></div>
+            <div className="h-6 w-64 mx-auto rounded bg-gray-200 mb-10"></div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-12">
+              {[1, 2, 3].map((i) => (
+                <div key={i} className="h-16 bg-gray-200 rounded"></div>
+              ))}
+            </div>
+            <div className="flex justify-center gap-4">
+              <div className="h-12 w-40 bg-gray-200 rounded"></div>
+              <div className="h-12 w-40 bg-gray-200 rounded"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section
       id="cta-section"
@@ -31,20 +58,19 @@ export default function CTASection() {
           <div className="flex justify-center mb-6">
             <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-gradient-to-r from-primary-teal/10 to-primary-blue/10 text-primary-blue border border-primary-teal/20">
               <Sparkles className="w-4 h-4 text-primary-teal animate-pulse" />
-              <span>Let's Co-create the Future</span>
+              <span>{t?.badge || "Let's Co-create the Future"}</span>
             </div>
           </div>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-950 font-sans tracking-tight max-w-3xl mx-auto leading-tight mb-4">
-            Ready to Unlock Your <br className="hidden sm:inline" />
-            Future Potential?
+            {t?.title || "Ready to Unlock Your"}{" "}
+            <br className="hidden sm:inline" />
+            {t?.titleHighlight || "Future Potential?"}
           </h2>
 
           <p className="text-base sm:text-lg md:text-xl text-gray-500 font-sans max-w-2xl mx-auto leading-relaxed mb-10">
-            Join thousands of individuals and dozens of leading organizations
-            that have transformed their capacities and biological ecosystems
-            with APR Foundation. We are ready to help you reach your highest
-            potential.
+            {t?.subtitle ||
+              "Join thousands of individuals and dozens of leading organizations that have transformed their capacities and biological ecosystems with APR Foundation. We are ready to help you reach your highest potential."}
           </p>
 
           {/* Contact Details Grid (Aesthetic layout) */}
@@ -56,10 +82,10 @@ export default function CTASection() {
               </div>
               <div>
                 <h4 className="font-bold text-gray-950 text-xs uppercase tracking-wider font-mono mb-1">
-                  Our HQ
+                  {t?.addressLabel || "Our HQ"}
                 </h4>
                 <p className="text-sm text-gray-600 leading-snug">
-                  South Jakarta, Indonesia
+                  {t?.address || "South Jakarta, Indonesia"}
                 </p>
               </div>
             </div>
@@ -71,7 +97,7 @@ export default function CTASection() {
               </div>
               <div>
                 <h4 className="font-bold text-gray-950 text-xs uppercase tracking-wider font-mono mb-1">
-                  Email Us
+                  {t?.emailLabel || "Email Us"}
                 </h4>
                 <a
                   href="mailto:info@aprfoundation.org"
@@ -89,7 +115,7 @@ export default function CTASection() {
               </div>
               <div>
                 <h4 className="font-bold text-gray-950 text-xs uppercase tracking-wider font-mono mb-1">
-                  Web portal
+                  {t?.webLabel || "Web portal"}
                 </h4>
                 <a
                   href="https://www.aprfoundation.org"
@@ -99,32 +125,6 @@ export default function CTASection() {
                 </a>
               </div>
             </div>
-
-            {/* Contact Persons */}
-            {/* <div className="flex items-start space-x-3.5 col-span-1">
-              <div className="p-2.5 rounded-xl bg-secondary-purple/10 text-secondary-purple shrink-0">
-                <Phone className="w-5 h-5" />
-              </div>
-              <div>
-                <h4 className="font-bold text-gray-950 text-xs uppercase tracking-wider font-mono mb-1">
-                  Contact Leads
-                </h4>
-                <div className="flex flex-col text-xs sm:text-sm text-gray-600 space-y-1">
-                  <a
-                    href="tel:+6282134224947"
-                    className="hover:text-primary-blue transition-colors font-medium"
-                  >
-                    +62 8213-4224-947 (Aulia)
-                  </a>
-                  <a
-                    href="tel:+6281575238239"
-                    className="hover:text-secondary-purple transition-colors font-medium"
-                  >
-                    +62 8157-5238-239 (Marta)
-                  </a>
-                </div>
-              </div>
-            </div> */}
           </div>
 
           {/* Action buttons */}
@@ -138,17 +138,17 @@ export default function CTASection() {
               }}
               className="py-3 px-8"
             >
-              Collaborate With Us
+              {t?.collaborateBtn || "Collaborate With Us"}
             </Button>
             <Button
               variant="outline"
               icon={<Instagram className="w-4.5 h-4.5" />}
               onClick={() => {
-                window.open("https://instagram.com/aprfoundation", "_blank");
+                window.open("https://instagram.com/apr_foundation", "_blank");
               }}
               className="py-3 px-8 border border-gray-250 hover:bg-gray-100"
             >
-              Visit Our Instagram
+              {t?.instagramBtn || "Visit Our Instagram"}
             </Button>
           </div>
         </GlassCard>
