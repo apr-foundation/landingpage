@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   description:
     "APR Foundation merupakan ekosistem pengembangan SDM & Organisasi berbasis kolaborasi multipihak, dengan pengalaman langsung menangani program pemerintah, korporasi, dan komunitas akar rumput di Indonesia.",
 
-  metadataBase: new URL("https://aprfoundation.id"), // ganti dengan domain Anda
+  metadataBase: new URL("https://aprfoundation.org"),
 
   applicationName: "APR Foundation",
 
@@ -20,15 +20,15 @@ export const metadata: Metadata = {
     icon: [
       {
         url: "/assets/favicons/favicon-192x192.png",
-        sizes: "96x96",
+        sizes: "192x192",
         type: "image/png",
       },
       {
-        url: "/assets/favicons/favicon.ico",
+        url: "favicon.ico",
         type: "image/x-icon",
       },
     ],
-    shortcut: "/assets/favicons/favicon.ico",
+    shortcut: "favicon.ico",
     apple: "/assets/favicons/apple-touch-icon.png",
   },
 
