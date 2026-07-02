@@ -22,7 +22,6 @@ import GlassCard from "@/components/shared/GlassCard";
 import Counter from "@/components/shared/Counter";
 import SectionTitle from "@/components/shared/SectionTitle";
 import LogoSlider from "@/components/shared/LogoSlider";
-import LanguageSwitcher from "@/components/shared/LanguageSwitcher";
 import Image from "next/image";
 
 interface HomeViewProps {

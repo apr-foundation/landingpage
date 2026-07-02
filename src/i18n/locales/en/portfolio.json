@@ -27,8 +27,8 @@
       },
       "portfolio": {
         "government-leadership-training": {
-          "title": "Government Leadership Training",
-          "subtitle": "Equipping 120 civil servants in South Jakarta with ethical decision-making skills, digital governance, and crisis communication.",
+          "title": "Youth Leadership Development Program",
+          "subtitle": "Empowering 100 young people with leadership, effective communication, and digital governance skills.",
           "category": "Leadership",
           "description": "Leadership development program designed to enhance government officials' capacity through learning about integrity leadership, digital governance, strategic communication, and effective decision-making."
         },
@@ -126,7 +126,7 @@
   "videos": {
     "badge": "APR CINEMATICS",
     "title": "Featured TVC & Film Profiles",
-    "subtitle": "Watch our custom documentaries and official graduation summaries detailing South Jakarta and West Java programs. Click play to watch.",
+    "subtitle": "Watch our documentaries and videos. Click play to watch.",
     "items": {
       "vid-manifesto-25": {
         "title": "Waste to Energy - Danantara Indonesia",

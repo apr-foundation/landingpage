@@ -62,7 +62,7 @@
   "visionMission": {
     "badge": "OUR COMPASS",
     "title": "Vision & Mission",
-    "subtitle": "The fundamental values that direct our actions, cohorts, partnerships, and scientific audits.",
+    "subtitle": "TThe core values that guide everything we do.",
     "vision": {
       "badge": "Our Vision",
       "title": "To Become a Collaborative Ecosystem",
@@ -97,8 +97,8 @@
     }
   },
   "team": {
-    "badge": "CO-FOUNDERS & DIRECTORS",
-    "title": "The Visionary Board",
+    "badge": "OUR TEAMS",
+    "title": "Dedicated Changemakers",
     "subtitle": "Meet the educators, agriculturalists, and storytellers orchestrating our nationwide initiatives.",
     "members": {
       "aulia-pradipta": {

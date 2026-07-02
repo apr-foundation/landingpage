@@ -62,7 +62,7 @@
   "visionMission": {
     "badge": "KOMPAS KAMI",
     "title": "Visi & Misi",
-    "subtitle": "Nilai fundamental yang mengarahkan tindakan, kohort, kemitraan, dan audit ilmiah kami.",
+    "subtitle": "Nilai fundamental yang mengarahkan arah gerak kami.",
     "vision": {
       "badge": "Visi Kami",
       "title": "Menjadi Ekosistem Kolaboratif",
@@ -97,8 +97,8 @@
     }
   },
   "team": {
-    "badge": "CO-FOUNDER & DIREKTUR",
-    "title": "Dewan Visioner",
+    "badge": "TIM KAMI",
+    "title": "Changemakers Berdedikasi",
     "subtitle": "Kenali para pendidik, agrikulturalis, dan pencerita yang mengoordinasikan inisiatif nasional kami.",
     "members": {
       "aulia-pradipta": {

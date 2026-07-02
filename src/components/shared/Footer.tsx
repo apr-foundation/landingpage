@@ -68,10 +68,10 @@ export default function Footer() {
           <div className="flex flex-col space-y-5 ">
             <div className="flex items-center space-x-3">
               <Image
-                src={"/assets/logos/Logo APR.png"}
+                src={"/assets/logos/app/APR Foundation White.png"}
                 alt="Logo APR"
-                width={100}
-                height={100}
+                width={160}
+                height={160}
               />
             </div>
             <p className="text-gray-400 text-sm leading-relaxed">
@@ -88,7 +88,7 @@ export default function Footer() {
                 <Linkedin className="w-4 h-4" />
               </a>
               <a
-                href="https://instagram.com/aprfoundation"
+                href="https://instagram.com/apr_foundation"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full bg-gray-900 border border-gray-800 hover:border-secondary-purple hover:text-secondary-purple flex items-center justify-center transition-colors duration-300 cursor-pointer"
@@ -119,7 +119,7 @@ export default function Footer() {
                   onClick={() => handleQuickLinkClick("programs")}
                   className="hover:text-white transition-colors duration-250 cursor-pointer focus:outline-none"
                 >
-                  {t?.programsLink || "Programs & Services (ILP, Agri)"}
+                  {t?.programsLink || "Programs & Services "}
                 </Link>
               </li>
               <li>
@@ -170,8 +170,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-gray-850 pt-8 flex flex-col sm:flex-row items-center justify-between space-y-4 sm:space-y-0">
           <p className="text-xs text-gray-500 text-center sm:text-left">
-            {t?.copyright ||
-              "© {year} APR Foundation. All Rights Reserved. South Jakarta, Indonesia."}
+            {`©  ${new Date().getFullYear()} APR Foundation. All Rights Reserved. South Jakarta, Indonesia.`}
           </p>
           <div className="flex items-center space-x-6 text-xs text-gray-500">
             <a href="#" className="hover:text-gray-300 transition-colors">

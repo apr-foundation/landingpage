@@ -151,11 +151,10 @@ export const teamMembers: TeamMember[] = [
     name: "Aulia Pradipta",
     position: "Founder & Chief Executive Officer",
     description: "Memimpin visi dan strategi APR untuk impact sustainability.",
-    image:
-      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=500&h=500&q=80",
+    image: "/assets/images/teams/Aulia Pradipta.webp",
     socials: {
-      linkedin: "https://linkedin.com/in/farhan-naufal",
-      instagram: "https://instagram.com/farhan_n",
+      // linkedin: "https://linkedin.com/in/farhan-naufal",
+      // instagram: "https://instagram.com/farhan_n",
     },
   },
   {
@@ -164,11 +163,10 @@ export const teamMembers: TeamMember[] = [
     position: "Advisor",
     description:
       "Memberikan insight terkait pengembangan agripreneurship dan food resilience.",
-    image:
-      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=500&h=500&q=80",
+    image: "/assets/images/teams/M. Rosyad Al Ghani.webp",
     socials: {
-      linkedin: "https://linkedin.com/in/sarah-amalia",
-      instagram: "https://instagram.com/sarahamalia",
+      // linkedin: "https://linkedin.com/in/sarah-amalia",
+      // instagram: "https://instagram.com/sarahamalia",
     },
   },
   {
@@ -177,12 +175,11 @@ export const teamMembers: TeamMember[] = [
     position: "Advisor",
     description:
       "Memberikan pengawasan dan insight terkait arah gerak organisasi.",
-    image:
-      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=500&h=500&q=80",
+    image: "/assets/images/teams/Fatkhurrokhim.webp",
     socials: {
-      linkedin: "https://linkedin.com/in/marta-widjanarko",
-      instagram: "https://instagram.com/marta_widjanarko",
-      email: "marta@aprfoundation.org",
+      // linkedin: "https://linkedin.com/in/marta-widjanarko",
+      // instagram: "https://instagram.com/marta_widjanarko",
+      // email: "marta@aprfoundation.org",
     },
   },
   {
@@ -191,12 +188,11 @@ export const teamMembers: TeamMember[] = [
     position: "Advisor",
     description:
       "Memberikan insight terkait program pengembangan leadership, talent dan future workforce.",
-    image:
-      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=500&h=500&q=80",
+    image: "/assets/images/teams/Safriko Desna Putra.webp",
     socials: {
-      linkedin: "https://linkedin.com/in/marta-widjanarko",
-      instagram: "https://instagram.com/marta_widjanarko",
-      email: "marta@aprfoundation.org",
+      // linkedin: "https://linkedin.com/in/marta-widjanarko",
+      // instagram: "https://instagram.com/marta_widjanarko",
+      // email: "marta@aprfoundation.org",
     },
   },
   {
@@ -204,12 +200,11 @@ export const teamMembers: TeamMember[] = [
     name: "Elfina Dewi Roseningrum",
     position: "Foundation Secretary",
     description: "Memimpin dan mendukung proses administratif.",
-    image:
-      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=500&h=500&q=80",
+    image: "/assets/images/teams/Elfina Dewi Roseningrum.webp",
     socials: {
-      linkedin: "https://linkedin.com/in/marta-widjanarko",
-      instagram: "https://instagram.com/marta_widjanarko",
-      email: "marta@aprfoundation.org",
+      // linkedin: "https://linkedin.com/in/marta-widjanarko",
+      // instagram: "https://instagram.com/marta_widjanarko",
+      // email: "marta@aprfoundation.org",
     },
   },
   {
@@ -218,12 +213,11 @@ export const teamMembers: TeamMember[] = [
     position: "Foundation Treasury",
     description:
       "Memimpin pengelolaan keuangan dan memastikan stabilitas operasional.",
-    image:
-      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=500&h=500&q=80",
+    image: "/assets/images/teams/Dwi Rahmawati Utami.webp",
     socials: {
-      linkedin: "https://linkedin.com/in/marta-widjanarko",
-      instagram: "https://instagram.com/marta_widjanarko",
-      email: "marta@aprfoundation.org",
+      // linkedin: "https://linkedin.com/in/marta-widjanarko",
+      // instagram: "https://instagram.com/marta_widjanarko",
+      // email: "marta@aprfoundation.org",
     },
   },
   {
@@ -232,12 +226,11 @@ export const teamMembers: TeamMember[] = [
     position: "Creative Lead",
     description:
       "Memimpin proses kreatif dengan prinsip inovatif dan etos kerja dedikatif.",
-    image:
-      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=500&h=500&q=80",
+    image: "/assets/images/teams/Abdul Malik Fajar.webp",
     socials: {
-      linkedin: "https://linkedin.com/in/marta-widjanarko",
-      instagram: "https://instagram.com/marta_widjanarko",
-      email: "marta@aprfoundation.org",
+      // linkedin: "https://linkedin.com/in/marta-widjanarko",
+      // instagram: "https://instagram.com/marta_widjanarko",
+      // email: "marta@aprfoundation.org",
     },
   },
   {
@@ -246,12 +239,11 @@ export const teamMembers: TeamMember[] = [
     position: "Talent Lead",
     description:
       "Memimpin program pengembangan leadership, talent dan future workforce.",
-    image:
-      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=500&h=500&q=80",
+    image: "/assets/images/teams/Annisa Bulan Dewi.webp",
     socials: {
-      linkedin: "https://linkedin.com/in/marta-widjanarko",
-      instagram: "https://instagram.com/marta_widjanarko",
-      email: "marta@aprfoundation.org",
+      // linkedin: "https://linkedin.com/in/marta-widjanarko",
+      // instagram: "https://instagram.com/marta_widjanarko",
+      // email: "marta@aprfoundation.org",
     },
   },
   {
@@ -260,12 +252,11 @@ export const teamMembers: TeamMember[] = [
     position: "Agripreneurship Lead",
     description:
       "Memimpin program pengembangan agripreneurship dan food resilience.",
-    image:
-      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=500&h=500&q=80",
+    image: "/assets/images/teams/Audri Syahroni.webp",
     socials: {
-      linkedin: "https://linkedin.com/in/marta-widjanarko",
-      instagram: "https://instagram.com/marta_widjanarko",
-      email: "marta@aprfoundation.org",
+      // linkedin: "https://linkedin.com/in/marta-widjanarko",
+      // instagram: "https://instagram.com/marta_widjanarko",
+      // email: "marta@aprfoundation.org",
     },
   },
   {
@@ -274,12 +265,11 @@ export const teamMembers: TeamMember[] = [
     position: "Partnership Lead",
     description:
       "Menjalin dan membina kerjasama berkelanjutan dengan mitra strategis.",
-    image:
-      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=500&h=500&q=80",
+    image: "/assets/images/teams/Marta Fibriantika.webp",
     socials: {
-      linkedin: "https://linkedin.com/in/marta-widjanarko",
-      instagram: "https://instagram.com/marta_widjanarko",
-      email: "marta@aprfoundation.org",
+      // linkedin: "https://linkedin.com/in/marta-widjanarko",
+      // instagram: "https://instagram.com/marta_widjanarko",
+      // email: "marta@aprfoundation.org",
     },
   },
   {
@@ -287,12 +277,11 @@ export const teamMembers: TeamMember[] = [
     name: "Dwi Maya Wijayanti",
     position: "Finance Lead",
     description: "Mengelola keuangan dan memastikan stabilitas operasional.",
-    image:
-      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=500&h=500&q=80",
+    image: "/assets/images/teams/Dwi Maya Wijayanti.webp",
     socials: {
-      linkedin: "https://linkedin.com/in/marta-widjanarko",
-      instagram: "https://instagram.com/marta_widjanarko",
-      email: "marta@aprfoundation.org",
+      // linkedin: "https://linkedin.com/in/marta-widjanarko",
+      // instagram: "https://instagram.com/marta_widjanarko",
+      // email: "marta@aprfoundation.org",
     },
   },
   {
@@ -301,12 +290,11 @@ export const teamMembers: TeamMember[] = [
     position: " Project Officer",
     description:
       "Mendukung operasional program dan memastikan deliverable tercapai dengan baik.",
-    image:
-      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=500&h=500&q=80",
+    image: "/assets/images/teams/Muhammad Jainal Abidin.webp",
     socials: {
-      linkedin: "https://linkedin.com/in/marta-widjanarko",
-      instagram: "https://instagram.com/marta_widjanarko",
-      email: "marta@aprfoundation.org",
+      // linkedin: "https://linkedin.com/in/marta-widjanarko",
+      // instagram: "https://instagram.com/marta_widjanarko",
+      // email: "marta@aprfoundation.org",
     },
   },
 ];

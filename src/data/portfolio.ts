@@ -41,7 +41,7 @@ export const leadershipData = {
       category: "Kepemimpinan",
       image:
         "/assets/images/leadership/Hari Pahlawan, 10 November 2019. Pemuda hadir untuk menuliskan tinta emas sejarah masa depan bangsa.jpg",
-      year: "2024",
+      year: "2019",
       description:
         "Program pengembangan kepemimpinan yang dirancang untuk meningkatkan kapasitas aparatur pemerintah melalui pembelajaran tentang kepemimpinan yang berintegritas, tata kelola digital, komunikasi strategis, dan pengambilan keputusan yang efektif.",
     },
@@ -52,7 +52,7 @@ export const leadershipData = {
         "Program pemberdayaan santri melalui pelatihan kewirausahaan, pengembangan kepemimpinan, serta pendampingan dalam membangun usaha yang berkelanjutan.",
       category: "Talent",
       image: "/assets/images/leadership/IMG_0147.jpg",
-      year: "2023",
+      year: "2025",
       description:
         "Inisiatif pengembangan talenta bersama BAZNAS yang bertujuan membekali santri dengan keterampilan berwirausaha, pola pikir kepemimpinan, serta pengalaman praktis untuk menciptakan dampak ekonomi dan sosial yang berkelanjutan.",
     },
@@ -63,7 +63,7 @@ export const leadershipData = {
         "Forum dialog interaktif yang mempertemukan pemuda, pemimpin, dan berbagai pemangku kepentingan untuk membahas isu kepemimpinan, inovasi, dan pembangunan masyarakat.",
       category: "Komunitas",
       image: "/assets/images/leadership/DSC00810.jpg",
-      year: "2025",
+      year: "2023",
       description:
         "Kegiatan diskusi dan kolaborasi yang mendorong partisipasi aktif generasi muda dalam bertukar gagasan, membangun jejaring, serta menciptakan solusi inovatif bagi tantangan sosial dan pembangunan bangsa.",
     },

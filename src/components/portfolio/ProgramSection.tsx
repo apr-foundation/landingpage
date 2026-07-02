@@ -142,13 +142,14 @@ const ProgramSection = ({
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
+
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
           <div className="text-left max-w-2xl ">
             <Image
               src={icon}
               alt={translatedTitle}
-              width={60}
-              height={60}
+              width={icon == "/assets/logos/Mudatani.png" ? 120 : 60}
+              height={icon == "/assets/logos/Mudatani.png" ? 120 : 60}
               className="mb-4"
             />
             <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-950 tracking-tight font-sans mb-3">
