@@ -39,29 +39,13 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "APR Foundation",
-    description:
-      "APR Foundation merupakan ekosistem pengembangan SDM & Organisasi berbasis kolaborasi multipihak.",
-    url: "https://aprfoundation.org",
-    siteName: "APR Foundation",
-    images: [
-      {
-        url: "/assets/images/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "APR Foundation",
-      },
-    ],
-    locale: "id_ID",
     type: "website",
+    locale: "id_ID",
+    siteName: "Legal Corpora",
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "APR Foundation",
-    description:
-      "APR Foundation merupakan ekosistem pengembangan SDM & Organisasi berbasis kolaborasi multipihak.",
-    images: ["/assets/images/og-image.png"],
   },
 };
 
