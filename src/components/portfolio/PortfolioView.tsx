@@ -95,7 +95,7 @@ export default function PortfolioView({ setActiveTab, t }: PortfolioViewProps) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16 flex flex-col items-center">
             <span className="inline-flex items-center px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-white/5 text-gray-300 mb-4 border border-white/10 shadow-sm">
-              {t.videos?.badge || "APR CINEMATICS"}
+              {t.videos?.badge || "PORTFOLIO VIDEOGRAFI"}
             </span>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight leading-snug">
               {t.videos?.title || "Featured TVC & Film Profiles"}

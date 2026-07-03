@@ -39,10 +39,10 @@
           "description": "Talent development initiative with BAZNAS aimed at equipping students with entrepreneurial skills, leadership mindsets, and practical experience to create sustainable economic and social impact."
         },
         "townhall-muda": {
-          "title": "Townhall Muda",
-          "subtitle": "Interactive dialogue forum bringing together youth, leaders, and various stakeholders to discuss leadership, innovation, and community development issues.",
+          "title": "Policy Discussion Forum",
+          "subtitle": "A collaborative forum that brings together young people, academics, and key stakeholders to discuss environmental policies and waste management.",
           "category": "Community",
-          "description": "Discussion and collaboration activities that encourage active youth participation in exchanging ideas, building networks, and creating innovative solutions for social challenges and national development."
+          "description": "Discussion and collaboration initiatives that encourage active youth participation in exchanging ideas, building networks, and creating innovative solutions for social challenges and national development."
         }
       }
     },
@@ -50,7 +50,7 @@
       "badge": "Mudatani",
       "title": "REGENERATIVE AGRICULTURE",
       "yearLabel": "Year",
-      "description": "Mudatani is a regenerative agriculture program initiated by APR Foundation to drive transformation in Indonesia's agricultural sector through two main pillars:",
+      "description": "Mudatani is a regenerative agriculture program designed to drive the transformation of Indonesia's agricultural sector through three key pillars:",
       "pillars": {
         "agripreneurship": {
           "title": "Agripreneurship",
@@ -124,8 +124,8 @@
     }
   },
   "videos": {
-    "badge": "APR CINEMATICS",
-    "title": "Featured TVC & Film Profiles",
+    "badge": "PORTFOLIO VIDEOGRAFI",
+    "title": "TVC & Company Profiles",
     "subtitle": "Watch our documentaries and videos. Click play to watch.",
     "items": {
       "vid-manifesto-25": {

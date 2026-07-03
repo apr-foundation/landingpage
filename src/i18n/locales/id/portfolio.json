@@ -28,7 +28,7 @@
       "portfolio": {
         "government-leadership-training": {
           "title": "Pelatihan Kepemimpinan untuk Generasi Muda.",
-          "subtitle": "Membekali 100 generasi muda dengan keterampilan kepemimpinan, komunikasi efektif, tata kelola digital. Aparatur sipil negara diganti generasi muda.",
+          "subtitle": "Membekali 100 generasi muda dengan keterampilan kepemimpinan, komunikasi efektif, tata kelola digital.",
           "category": "Kepemimpinan",
           "description": "Program pengembangan kepemimpinan yang dirancang untuk meningkatkan kapasitas aparatur pemerintah melalui pembelajaran tentang kepemimpinan yang berintegritas, tata kelola digital, komunikasi strategis, dan pengambilan keputusan yang efektif."
         },
@@ -39,8 +39,8 @@
           "description": "Inisiatif pengembangan talenta bersama BAZNAS yang bertujuan membekali santri dengan keterampilan berwirausaha, pola pikir kepemimpinan, serta pengalaman praktis untuk menciptakan dampak ekonomi dan sosial yang berkelanjutan."
         },
         "townhall-muda": {
-          "title": "Pelatihan Kepemimpinan untuk Generasi Muda",
-          "subtitle": "Membekali 100 generasi muda dengan keterampilan kepemimpinan, komunikasi efektif, tata kelola digital. Aparatur sipil negara diganti generasi muda.",
+          "title": "Forum Diskusi Kebijakan.",
+          "subtitle": "Forum kolaboratif yang mempertemukan generasi muda, akademisi, dan pemangku kepentingan untuk membahas kebijakan lingkungan serta waste management.",
           "category": "Komunitas",
           "description": "Kegiatan diskusi dan kolaborasi yang mendorong partisipasi aktif generasi muda dalam bertukar gagasan, membangun jejaring, serta menciptakan solusi inovatif bagi tantangan sosial dan pembangunan bangsa."
         }
@@ -50,7 +50,7 @@
       "badge": "Mudatani",
       "title": "REGENERATIVE AGRICULTURE",
       "yearLabel": "Tahun",
-      "description": "Mudatani adalah program pertanian regeneratif yang digagas oleh APR Foundation untuk mendorong transformasi sektor pertanian Indonesia melalui dua pilar utama:",
+      "description": "Mudatani adalah program pertanian regeneratif untuk mendorong transformasi sektor pertanian Indonesia melalui tiga pilar utama:",
       "pillars": {
         "agripreneurship": {
           "title": "Agripreneurship",
@@ -124,9 +124,9 @@
     }
   },
   "videos": {
-    "badge": "APR CINEMATICS",
-    "title": "Featured TVC & Film Profiles",
-    "subtitle": "WSaksikan dokumenter dan video kami. Klik tombol putar untuk mulai menonton.",
+    "badge": "PORTFOLIO VIDEOGRAFI",
+    "title": "TVC & Company Profiles",
+    "subtitle": "Saksikan dokumenter dan video kami. Klik tombol putar untuk mulai menonton.",
     "items": {
       "vid-manifesto-25": {
         "title": "Waste to Energy - Danantara Indonesia",
